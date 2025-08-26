@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaGithub, FaLinkedinIn, FaInstagram, FaFileAlt } from "react-icons/fa";
-import ResumeModal from "@/sections/ResumeModal";
+import ResumeModal from "@/components/common/ResumeModal";
 
 interface FooterProps {
   scrollToSection: (sectionId: string) => void;

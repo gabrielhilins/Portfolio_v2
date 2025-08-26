@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import type React from "react";
 
 
@@ -140,7 +139,7 @@ export interface TextContent {
 }
 
 interface Technology {
-  nameKey(nameKey: any): React.ReactNode | Iterable<React.ReactNode>;
+  nameKey: string;
   name: string;
   icon?: string;
 }

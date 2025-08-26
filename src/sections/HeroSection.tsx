@@ -7,7 +7,7 @@ import { FaGithub, FaLinkedinIn, FaChevronDown, FaFileAlt } from "react-icons/fa
 import { GrProjects } from "react-icons/gr";
 import { FaRegHandshake } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
-import ResumeModal from "./ResumeModal";
+import ResumeModal from "../components/common/ResumeModal";
 
 interface HeroSectionProps {
   scrollToSection: (sectionId: string) => void;

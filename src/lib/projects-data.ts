@@ -1,4 +1,3 @@
-// src/lib/projects-data.ts
 import { Project } from './types';
 import REF from '../../public/REF.png';
 import REAL from '../../public/REAL.png';
@@ -17,11 +16,11 @@ export const projectsData: Project[] = [
     descriptionKey: "project_ggabs_description",
     image: GGABSTECHDESIGN,
     technologies: [
-      { name: "React", icon: "devicon-react-plain colored" },
-      { name: "Sass", icon: "devicon-sass-original colored" },
-      { name: "Vite", icon: "devicon-vitejs-plain colored" },
-      { name: "Swiper js", icon: "devicon-swiper-original colored" },
-      { name: "Vercel", icon: "devicon-vercel-plain colored" }
+      { nameKey: "tech_react", name: "React", icon: "devicon-react-plain colored" },
+      { nameKey: "tech_sass", name: "Sass", icon: "devicon-sass-original colored" },
+      { nameKey: "tech_vite", name: "Vite", icon: "devicon-vitejs-plain colored" },
+      { nameKey: "tech_swiper", name: "Swiper js", icon: "devicon-swiper-original colored" },
+      { nameKey: "tech_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" }
     ],
     liveUrl: "https://www.ggabstechdesign.com.br/",
     featured: true,
@@ -36,10 +35,10 @@ export const projectsData: Project[] = [
     descriptionKey: "project_ref_description",
     image: REF,
     technologies: [
-      { name: "TypeScript", icon: "devicon-typescript-plain colored" },
-      { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
-      { name: "Next.js", icon: "devicon-nextjs-plain colored" },
-      { name: "Vercel", icon: "devicon-vercel-plain colored" }
+      { nameKey: "tech_typescript", name: "TypeScript", icon: "devicon-typescript-plain colored" },
+      { nameKey: "tech_tailwind", name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
+      { nameKey: "tech_nextjs", name: "Next.js", icon: "devicon-nextjs-plain colored" },
+      { nameKey: "tech_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" }
     ],
     liveUrl: "https://ref-gerador-abnt.vercel.app/",
     githubFrontendUrl: "https://github.com/gabrielhilins/REF_Gerador_ABNT",
@@ -54,18 +53,18 @@ export const projectsData: Project[] = [
     descriptionKey: "project_semprenicea_description",
     image: SEMPRENICEA,
     technologies: [
-      { name: "TypeScript", icon: "devicon-typescript-plain colored" },
-      { name: "Sass", icon: "devicon-sass-original colored" },
-      { name: "Swiper", icon: "devicon-swiper-original colored" },
-      { name: "Next.js", icon: "devicon-nextjs-plain colored" },
-      { name: "Java", icon: "devicon-java-plain colored" },
-      { name: "Spring Boot", icon: "devicon-spring-original-wordmark colored" },
-      { name: "Hibernate", icon: "devicon-hibernate-plain colored" },
-      { name: "Swagger", icon: "devicon-swagger-plain colored" },
-      { name: "Supabase", icon: "devicon-supabase-plain colored" },
-      { name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
-      { name: "Docker", icon: "devicon-docker-plain colored" },
-      { name: "Vercel", icon: "devicon-vercel-plain colored" },
+      { nameKey: "tech_typescript", name: "TypeScript", icon: "devicon-typescript-plain colored" },
+      { nameKey: "tech_sass", name: "Sass", icon: "devicon-sass-original colored" },
+      { nameKey: "tech_swiper", name: "Swiper", icon: "devicon-swiper-original colored" },
+      { nameKey: "tech_nextjs", name: "Next.js", icon: "devicon-nextjs-plain colored" },
+      { nameKey: "tech_java", name: "Java", icon: "devicon-java-plain colored" },
+      { nameKey: "tech_spring_boot", name: "Spring Boot", icon: "devicon-spring-original-wordmark colored" },
+      { nameKey: "tech_hibernate", name: "Hibernate", icon: "devicon-hibernate-plain colored" },
+      { nameKey: "tech_swagger", name: "Swagger", icon: "devicon-swagger-plain colored" },
+      { nameKey: "tech_supabase", name: "Supabase", icon: "devicon-supabase-plain colored" },
+      { nameKey: "tech_postgresql", name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
+      { nameKey: "tech_docker", name: "Docker", icon: "devicon-docker-plain colored" },
+      { nameKey: "tech_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
     ],
     liveUrl: "https://sempre-nicea-front-neon.vercel.app/",
     githubFrontendUrl: "https://github.com/gabrielhilins/SEMPRENICEA_Frontend",
@@ -88,12 +87,12 @@ export const projectsData: Project[] = [
     descriptionKey: "project_portfolio_v1_description",
     image: PORTFOLIOV1,
     technologies: [
-      { name: "React", icon: "devicon-react-plain colored" },
-      { name: "Chakra UI", icon: "devicon-chakraui-plain colored"},
-      { name: "Swiper js", icon: "devicon-swiper-original colored" },
-      { name: "Vite", icon: "devicon-vitejs-plain colored" },
-      { name: "Vercel", icon: "devicon-vercel-plain colored" },
-      { name: "Figma", icon: "devicon-figma-plain colored"}
+      { nameKey: "tech_react", name: "React", icon: "devicon-react-plain colored" },
+      { nameKey: "tech_chakra_ui", name: "Chakra UI", icon: "devicon-chakraui-plain colored" },
+      { nameKey: "tech_swiper", name: "Swiper js", icon: "devicon-swiper-original colored" },
+      { nameKey: "tech_vite", name: "Vite", icon: "devicon-vitejs-plain colored" },
+      { nameKey: "tech_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
+      { nameKey: "tech_figma", name: "Figma", icon: "devicon-figma-plain colored" }
     ],
     liveUrl: "https://portfolio-gabriel-henriques-projects.vercel.app/",
     githubFrontendUrl: "https://github.com/gabrielhilins/Portfolio_v1",
@@ -108,11 +107,11 @@ export const projectsData: Project[] = [
     descriptionKey: "project_real_description",
     image: REAL,
     technologies: [
-      { name: "HTML", icon: "devicon-html5-plain colored"},
-      { name: "CSS", icon: "devicon-css3-plain colored"},
-      { name: "Javascript", icon: "devicon-javascript-plain colored" },
-      { name: "Vite", icon: "devicon-vitejs-plain colored" },
-      { name: "Vercel", icon: "devicon-vercel-plain colored" }
+      { nameKey: "tech_html", name: "HTML", icon: "devicon-html5-plain colored" },
+      { nameKey: "tech_css", name: "CSS", icon: "devicon-css3-plain colored" },
+      { nameKey: "tech_javascript", name: "Javascript", icon: "devicon-javascript-plain colored" },
+      { nameKey: "tech_vite", name: "Vite", icon: "devicon-vitejs-plain colored" },
+      { nameKey: "tech_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" }
     ],
     liveUrl: "https://real-iota-ivory.vercel.app/",
     githubFrontendUrl: "https://github.com/gabrielhilins/REAL_Simulator",
@@ -127,11 +126,11 @@ export const projectsData: Project[] = [
     descriptionKey: "project_marvel_description",
     image: MARVEL,
     technologies: [
-      { name: "TypeScript", icon: "devicon-typescript-plain colored" },
-      { name: "Chakra UI", icon: "devicon-chakraui-plain colored" },
-      { name: "Axios", icon: "devicon-axios-plain colored" },
-      { name: "Vite", icon: "devicon-vitejs-plain colored" },
-      { name: "Vercel", icon: "devicon-vercel-plain colored" }
+      { nameKey: "tech_typescript", name: "TypeScript", icon: "devicon-typescript-plain colored" },
+      { nameKey: "tech_chakra_ui", name: "Chakra UI", icon: "devicon-chakraui-plain colored" },
+      { nameKey: "tech_axios", name: "Axios", icon: "devicon-axios-plain colored" },
+      { nameKey: "tech_vite", name: "Vite", icon: "devicon-vitejs-plain colored" },
+      { nameKey: "tech_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" }
     ],
     liveUrl: "https://marvel-characters-six.vercel.app/",
     githubFrontendUrl: "https://github.com/gabrielhilins/Marvel_Characters",
@@ -146,15 +145,15 @@ export const projectsData: Project[] = [
     descriptionKey: "project_recdaterra_description",
     image: RECDATERRA,
     technologies: [
-      { name: "React", icon: "devicon-react-plain colored" },
-      { name: "Chakra UI", icon: "devicon-chakraui-plain colored" },
-      { name: "Next.js", icon: "devicon-nextjs-plain colored" },
-      { name: "Java", icon: "devicon-java-plain colored" },
-      { name: "Spring", icon: "devicon-spring-original-wordmark colored" },
-      { name: "Hibernate", icon: "devicon-hibernate-plain colored" },
-      { name: "Swagger", icon: "devicon-swagger-plain colored" },
-      { name: "Vercel", icon: "devicon-vercel-plain colored" },
-      { name: "Figma", icon: "devicon-figma-plain colored" }
+      { nameKey: "tech_react", name: "React", icon: "devicon-react-plain colored" },
+      { nameKey: "tech_chakra_ui", name: "Chakra UI", icon: "devicon-chakraui-plain colored" },
+      { nameKey: "tech_nextjs", name: "Next.js", icon: "devicon-nextjs-plain colored" },
+      { nameKey: "tech_java", name: "Java", icon: "devicon-java-plain colored" },
+      { nameKey: "tech_spring", name: "Spring", icon: "devicon-spring-original-wordmark colored" },
+      { nameKey: "tech_hibernate", name: "Hibernate", icon: "devicon-hibernate-plain colored" },
+      { nameKey: "tech_swagger", name: "Swagger", icon: "devicon-swagger-plain colored" },
+      { nameKey: "tech_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
+      { nameKey: "tech_figma", name: "Figma", icon: "devicon-figma-plain colored" }
     ],
     liveUrl: "https://rec-da-terra-front-end.vercel.app/",
     githubFrontendUrl: "https://github.com/gabrielhilins/RecDaTerra_FrontEnd",
@@ -176,11 +175,11 @@ export const projectsData: Project[] = [
     descriptionKey: "project_dashboard_inep_description",
     image: DASHBOARDINEP,
     technologies: [
-      { name: "HTML5", icon: "devicon-html5-plain colored" },
-      { name: "CSS3", icon: "devicon-css3-plain colored" },
-      { name: "Node.js", icon: "devicon-nodejs-plain colored" },
-      { name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
-      { name: "Figma", icon: "devicon-figma-plain colored" }
+      { nameKey: "tech_html5", name: "HTML5", icon: "devicon-html5-plain colored" },
+      { nameKey: "tech_css3", name: "CSS3", icon: "devicon-css3-plain colored" },
+      { nameKey: "tech_nodejs", name: "Node.js", icon: "devicon-nodejs-plain colored" },
+      { nameKey: "tech_postgresql", name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
+      { nameKey: "tech_figma", name: "Figma", icon: "devicon-figma-plain colored" }
     ],
     liveUrl: "https://projeto-dashboard-inep.vercel.app/",
     githubFrontendUrl: "https://github.com/gabrielhilins/Projeto-Dashboard-Inep",
@@ -201,9 +200,9 @@ export const projectsData: Project[] = [
     descriptionKey: "project_caremind_edu_description",
     image: Caredmindedu,
     technologies: [
-      { name: "Figma", icon: "devicon-figma-plain colored" },
-      { name: "Canva", icon: "devicon-canva-plain colored" },
-      { name: "Trello", icon: "devicon-trello-plain colored" }
+      { nameKey: "tech_figma", name: "Figma", icon: "devicon-figma-plain colored" },
+      { nameKey: "tech_canva", name: "Canva", icon: "devicon-canva-plain colored" },
+      { nameKey: "tech_trello", name: "Trello", icon: "devicon-trello-plain colored" }
     ],
     liveUrl: "https://www.figma.com/proto/BMgQQZCjrO3MEqqWg3mYnK/CaremindEdu?type=design&node-id=1-2&t=Fr8BTs7qyt9fwqD3-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2",
     githubFrontendUrl: undefined,
