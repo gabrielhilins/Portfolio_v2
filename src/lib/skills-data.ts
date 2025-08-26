@@ -1,7 +1,5 @@
-// src/lib/skills-data.ts
-import { FaUsers, FaLightbulb, FaBullseye, FaComments, FaClock, FaFlag, FaBrain, FaPuzzlePiece, FaGlobe } from 'react-icons/fa';
+import { FaLightbulb, FaBullseye, FaComments, FaClock, FaFlag, FaPuzzlePiece, FaGlobe, FaBook, FaBriefcase, FaRocket, FaHandshake, FaMicrophone, FaShieldAlt, FaUsers } from 'react-icons/fa';
 import { HardSkillsCategories, SoftSkill } from './types';
-import { IoTrendingUp } from "react-icons/io5";
 import { AiOutlineSwap } from "react-icons/ai";
 
 
@@ -61,5 +59,10 @@ export const softSkillsData: (Omit<SoftSkill, 'name' | 'proficiency'> & { nameKe
   { nameKey: "skill_name_results_focus", icon: FaBullseye, proficiencyKey: "skill_proficiency_developed" },
   { nameKey: "skill_name_communication", icon: FaComments, proficiencyKey: "skill_proficiency_in_development" },
   { nameKey: "skill_name_time_management", icon: FaClock, proficiencyKey: "skill_proficiency_in_development" },
-  { nameKey: "skill_name_learning", icon: IoTrendingUp, proficiencyKey: "skill_proficiency_in_development" },
+  { nameKey: "skill_name_learning", icon: FaBook, proficiencyKey: "skill_proficiency_in_development" },
+  { nameKey: "skill_name_collaborative_work", icon: FaUsers, proficiencyKey: "skill_proficiency_in_development" },
+  { nameKey: "skill_name_entrepreneurship", icon: FaRocket, proficiencyKey: "skill_proficiency_in_development" },
+  { nameKey: "skill_name_negotiation", icon: FaHandshake, proficiencyKey: "skill_proficiency_in_development" },
+  { nameKey: "skill_name_pitch", icon: FaMicrophone, proficiencyKey: "skill_proficiency_in_development" },
+  { nameKey: "skill_name_discipline", icon: FaShieldAlt, proficiencyKey: "skill_proficiency_in_development" },
 ];

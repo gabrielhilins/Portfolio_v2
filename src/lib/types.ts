@@ -139,6 +139,7 @@ export interface TextContent {
 }
 
 interface Technology {
+  nameKey(nameKey: any): React.ReactNode | Iterable<React.ReactNode>;
   name: string;
   icon?: string;
 }

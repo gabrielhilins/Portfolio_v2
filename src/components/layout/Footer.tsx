@@ -1,36 +1,36 @@
-// src/components/layout/Footer.tsx
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { useTranslation } from 'react-i18next';
-import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { FaGithub, FaLinkedinIn, FaInstagram, FaFileAlt } from "react-icons/fa";
+import ResumeModal from "@/sections/ResumeModal";
 
 interface FooterProps {
   scrollToSection: (sectionId: string) => void;
 }
 
 export default function Footer({ scrollToSection }: FooterProps) {
-  const { t } = useTranslation();
-  const [displayDateTime, setDisplayDateTime] = useState('');
+  const { t, i18n } = useTranslation();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  useEffect(() => {
-    const updateDateTime = () => {
-      const now = new Date();
-      const day = String(now.getDate()).padStart(2, '0');
-      const month = String(now.getMonth() + 1).padStart(2, '0'); // Mês é 0-indexado
-      const year = now.getFullYear();
-      const hours = String(now.getHours()).padStart(2, '0');
-      const minutes = String(now.getMinutes()).padStart(2, '0');
-      const seconds = String(now.getSeconds()).padStart(2, '0');
-      const milliseconds = String(now.getMilliseconds()).padStart(3, '0');
-      setDisplayDateTime(`${day}/${month}/${year} ${hours}:${minutes}:${seconds}:${milliseconds}`);
-    };
+  const curriculoPTURL =
+    "https://docs.google.com/document/d/1sc9UWKLyZEcTQIUAUYoWo0BrBVBuwwtoE7-M7I8bxDk/pub?embedded=true";
+  const pdfCurriculoPTURL =
+    "https://docs.google.com/document/d/1sc9UWKLyZEcTQIUAUYoWo0BrBVBuwwtoE7-M7I8bxDk/export?format=pdf";
 
-    const intervalId = setInterval(updateDateTime, 1);
-    updateDateTime(); // Initial call
+  const curriculoENURL =
+    "https://docs.google.com/document/d/1sSgFU1u_diYgDnnpqVwuKLdlw5nwr7wee0tjY90Swsk/pub?embedded=true";
+  const pdfCurriculoENURL =
+    "https://docs.google.com/document/d/1sSgFU1u_diYgDnnpqVwuKLdlw5nwr7wee0tjY90Swsk/export?format=pdf";
 
-    return () => clearInterval(intervalId);
-  }, []);
+  // Função para obter o URL do currículo com base no idioma
+  const getCurriculoURL = () => {
+    return i18n.language === "en" ? curriculoENURL : curriculoPTURL;
+  };
+
+  const getPdfCurriculoURL = () => {
+    return i18n.language === "en" ? pdfCurriculoENURL : pdfCurriculoPTURL;
+  };
 
   return (
     <footer className="bg-muted/50 py-12 px-4 sm:px-6 lg:px-8">
@@ -38,14 +38,14 @@ export default function Footer({ scrollToSection }: FooterProps) {
         <div className="mb-8">
           <div
             className="inline-flex items-center gap-2 mb-4 cursor-pointer"
-            onClick={() => scrollToSection('hero')}
+            onClick={() => scrollToSection("hero")}
           >
             <span className="font-bold text-3xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Gabriel Henrique Lins
             </span>
           </div>
           <p className="text-muted-foreground max-w-md mx-auto">
-            {t('footer_slogan')}
+            {t("footer_slogan")}
           </p>
         </div>
 
@@ -54,9 +54,9 @@ export default function Footer({ scrollToSection }: FooterProps) {
             href="https://github.com/gabrielhilins"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-accent hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 cursor-pointer"
+            className="p-3 rounded-full bg-accent hover:bg-gray-900 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer"
             data-tooltip-id="footer-github-tooltip"
-            data-tooltip-content={t('tooltip_footer_github')}
+            data-tooltip-content={t("tooltip_footer_github")}
           >
             <FaGithub className="h-5 w-5" />
           </a>
@@ -64,9 +64,9 @@ export default function Footer({ scrollToSection }: FooterProps) {
             href="https://linkedin.com/in/gabriel-henrique-lins"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-accent hover:bg-secondary hover:text-secondary-foreground transition-all duration-300 hover:scale-110 cursor-pointer"
+            className="p-3 rounded-full bg-accent hover:bg-blue-700 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer"
             data-tooltip-id="footer-linkedin-tooltip"
-            data-tooltip-content={t('tooltip_footer_linkedin')}
+            data-tooltip-content={t("tooltip_footer_linkedin")}
           >
             <FaLinkedinIn className="h-5 w-5" />
           </a>
@@ -74,23 +74,37 @@ export default function Footer({ scrollToSection }: FooterProps) {
             href="https://instagram.com/ggabstechdesign"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-accent hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 cursor-pointer"
+            className="p-3 rounded-full bg-accent hover:bg-gradient-to-r hover:from-purple-600 hover:via-pink-600 hover:to-orange-600 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer"
             data-tooltip-id="footer-instagram-tooltip"
-            data-tooltip-content={t('tooltip_footer_instagram')}
+            data-tooltip-content={t("tooltip_footer_instagram")}
           >
             <FaInstagram className="h-5 w-5" />
           </a>
-          
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="p-3 rounded-full bg-accent hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 cursor-pointer"
+            data-tooltip-id="footer-resume-tooltip"
+            data-tooltip-content={t("tooltip_resume")}
+          >
+            <FaFileAlt className="h-5 w-5" />
+          </button>
         </div>
 
         <div className="border-t border-border pt-8">
           <p className="text-muted-foreground text-sm mb-2">
-            {t('footer_copyright')}
-          </p>
-          <p className="text-muted-foreground text-xs opacity-70">
-            {displayDateTime}
+            {t("footer_copyright")}
           </p>
         </div>
+
+        {/* Modal reutilizável para exibir o currículo */}
+        <ResumeModal
+          isOpen={isModalOpen}
+          onOpenChange={setIsModalOpen}
+          curriculumUrl={getCurriculoURL()}
+          pdfUrl={getPdfCurriculoURL()}
+          title={t("tooltip_resume")}
+          downloadButtonText={t("hero_cta_download_resume", { defaultValue: "Download Resume as PDF" })}
+        />
       </div>
     </footer>
   );

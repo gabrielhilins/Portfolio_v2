@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import { FaCalendarAlt, FaBriefcase, FaGraduationCap } from "react-icons/fa";
 import { IoIosPin } from "react-icons/io";
 
@@ -12,44 +12,44 @@ import { experiencesData } from "@/lib/experiences-data";
 
 export default function ExperienceSection() {
   const { t } = useTranslation();
-  const [activeCategory, setActiveCategory] = useState<'professional' | 'academic'>('professional');
+  const [activeCategory, setActiveCategory] = useState<"professional" | "academic">("professional");
 
-  const filteredExperiences = experiencesData.filter(exp => exp.type === activeCategory);
+  const filteredExperiences = experiencesData.filter((exp) => exp.type === activeCategory);
 
   return (
     <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30 rounded-lg shadow-xl">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-fade-in">
-            {t('experience_title')}
+            {t("experience_title")}
           </h2>
           <p className="text-xl text-muted-foreground animate-fade-in">
-            {t('experience_subtitle')}
+            {t("experience_subtitle")}
           </p>
         </div>
 
         <div className="flex justify-center gap-4 mb-12 animate-fade-in">
           <button
-            onClick={() => setActiveCategory('professional')}
+            onClick={() => setActiveCategory("professional")}
             className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ease-in-out cursor-pointer
               ${
-                activeCategory === 'professional'
-                  ? 'bg-secondary text-primary-foreground shadow-md'
-                  : 'bg-background text-muted-foreground hover:bg-accent hover:text-foreground'
+                activeCategory === "professional"
+                  ? "bg-secondary text-primary-foreground shadow-md"
+                  : "bg-background text-muted-foreground hover:bg-accent hover:text-foreground"
               }`}
           >
-            {t('experience_professional')}
+            {t("experience_professional")}
           </button>
           <button
-            onClick={() => setActiveCategory('academic')}
+            onClick={() => setActiveCategory("academic")}
             className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ease-in-out cursor-pointer
               ${
-                activeCategory === 'academic'
-                  ? 'bg-secondary text-primary-foreground shadow-md'
-                  : 'bg-background text-muted-foreground hover:bg-accent hover:text-foreground'
+                activeCategory === "academic"
+                  ? "bg-secondary text-primary-foreground shadow-md"
+                  : "bg-background text-muted-foreground hover:bg-accent hover:text-foreground"
               }`}
           >
-            {t('experience_academic')}
+            {t("experience_academic")}
           </button>
         </div>
 
@@ -70,7 +70,7 @@ export default function ExperienceSection() {
                         height={64}
                       />
                     ) : (
-                      exp.type === 'professional' ? (
+                      exp.type === "professional" ? (
                         <FaBriefcase className="h-8 w-8 text-white" />
                       ) : (
                         <FaGraduationCap className="h-8 w-8 text-white" />
@@ -104,14 +104,17 @@ export default function ExperienceSection() {
                           <div className="flex items-center gap-1 mb-1">
                             <FaCalendarAlt className="h-4 w-4" />
                             <span>
-                              {t(exp.startDateKey)} - {exp.endDateKey === 'exp_ggabs_endDate' || exp.endDateKey === 'exp_aicury_endDate' ? t('experience_present') : t(exp.endDateKey)}
+                              {t(exp.startDateKey)} -{" "}
+                              {exp.endDateKey === "exp_ggabs_endDate" || exp.endDateKey === "exp_aicury_endDate"
+                                ? t("experience_present")
+                                : t(exp.endDateKey)}
                             </span>
                           </div>
                           <div className="flex items-center gap-1">
                             <IoIosPin className="h-4 w-4" />
                             <span>{t(exp.locationKey)}</span>
                           </div>
-                          {exp.type === 'professional' && exp.hiringModelKey && (
+                          {exp.type === "professional" && exp.hiringModelKey && (
                             <div className="flex items-center gap-1">
                               <FaBriefcase className="h-4 w-4" />
                               <span>{t(exp.hiringModelKey)}</span>
@@ -119,7 +122,7 @@ export default function ExperienceSection() {
                           )}
                           {exp.workModelKey && (
                             <div className="flex items-center gap-1">
-                              <IoIosPin className="h-4 w-4" /> {/* Usando MapPin para modelo de trabalho também, ou outro ícone se preferir */}
+                              <IoIosPin className="h-4 w-4" />
                               <span>{t(exp.workModelKey)}</span>
                             </div>
                           )}
@@ -132,7 +135,7 @@ export default function ExperienceSection() {
 
                       <div className="flex flex-wrap gap-2">
                         <h4 className="text-sm font-semibold text-foreground mb-2 w-full">
-                          {t('experience_skills_title')}:
+                          {t("experience_skills_title")}:
                         </h4>
                         {exp.skills && exp.skills.length > 0 ? (
                           exp.skills.map((skill) => (
@@ -140,12 +143,12 @@ export default function ExperienceSection() {
                               key={skill}
                               className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium cursor-pointer"
                             >
-                              {skill}
+                              {t(skill)}
                             </span>
                           ))
                         ) : (
                           <span className="text-sm text-muted-foreground">
-                            {t('experience_no_skills')}
+                            {t("experience_no_skills")}
                           </span>
                         )}
                       </div>
@@ -155,7 +158,7 @@ export default function ExperienceSection() {
               ))
             ) : (
               <p className="text-center text-muted-foreground text-lg">
-                {t('experience_no_experience')}
+                {t("experience_no_experience")}
               </p>
             )}
           </div>

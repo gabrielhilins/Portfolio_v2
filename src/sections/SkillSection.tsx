@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import { FaProjectDiagram } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
 import { HardSkill, SoftSkill } from "@/lib/types";
@@ -48,10 +48,10 @@ export default function SkillsSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-fade-in">
-            {t('skills_title')}
+            {t("skills_title")}
           </h2>
           <p className="text-xl text-muted-foreground animate-fade-in">
-            {t('skills_subtitle')}
+            {t("skills_subtitle")}
           </p>
         </div>
 
@@ -65,20 +65,28 @@ export default function SkillsSection() {
               <RadioGroupItem value="hard" id="hard-skills" className="peer sr-only" />
               <Label
                 htmlFor="hard-skills"
-                className="py-2 px-6 rounded-full cursor-pointer transition-colors duration-300 peer-data-[state=checked]:bg-primary peer-data-[state=checked]:text-primary-foreground text-foreground hover:bg-muted"
+                className={`py-2 px-6 rounded-full cursor-pointer transition-colors duration-300 text-foreground hover:bg-muted ${
+                  skillType === "hard"
+                    ? "bg-primary text-primary-foreground"
+                    : "hover:bg-primary/10"
+                }`}
               >
                 <IoCodeSlash className="inline-block h-5 w-5 mr-2" />
-                {t('skills_hardSkills')}
+                {t("skills_hardSkills")}
               </Label>
             </div>
             <div className="flex items-center space-x-2">
               <RadioGroupItem value="soft" id="soft-skills" className="peer sr-only" />
               <Label
                 htmlFor="soft-skills"
-                className="py-2 px-6 rounded-full cursor-pointer transition-colors duration-300 peer-data-[state=checked]:bg-primary peer-data-[state=checked]:text-primary-foreground text-foreground hover:bg-muted"
+                className={`py-2 px-6 rounded-full cursor-pointer transition-colors duration-300 text-foreground hover:bg-muted ${
+                  skillType === "soft"
+                    ? "bg-blue-600 text-white"
+                    : "hover:bg-blue-100"
+                }`}
               >
                 <HiUserGroup className="inline-block h-5 w-5 mr-2" />
-                {t('skills_softSkills')}
+                {t("skills_softSkills")}
               </Label>
             </div>
           </RadioGroup>
@@ -114,7 +122,7 @@ export default function SkillsSection() {
                     {(skills as unknown as HardSkill[]).map((skill: HardSkill) => (
                       <div key={skill.nameKey} className="flex justify-between items-center">
                         <span className="flex items-center gap-2 text-muted-foreground">
-                          <i className={`${skill.icon} text-lg`} />
+                          {skill.icon && <i className={`${skill.icon} text-lg`} />}
                           {t(skill.nameKey)}
                         </span>
                         <span
@@ -138,8 +146,8 @@ export default function SkillsSection() {
               >
                 <CardContent className="p-0 flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-full bg-secondary/10">
-                      <skill.icon className="h-6 w-6 text-secondary" />
+                    <div className="p-2 rounded-full bg-blue-100">
+                      <skill.icon className="h-6 w-6 text-blue-600" />
                     </div>
                     <span className="font-medium text-foreground">{t(skill.nameKey)}</span>
                   </div>

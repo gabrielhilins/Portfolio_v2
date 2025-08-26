@@ -1,4 +1,3 @@
-// src/lib/experiences-data.ts
 import { Experience } from './types';
 import GGABSLogo from '../../public/LogoTipo Fundo Azul e branco.png';
 import Tpf from '../../public/tpf_logo.jpg';
@@ -19,7 +18,18 @@ export const experiencesData: Experience[] = [
     startDateKey: "exp_ggabs_startDate",
     endDateKey: "exp_ggabs_endDate",
     descriptionKey: "exp_ggabs_desc",
-    skills: ["React", "Next.js", "Node.js", "AWS", "Docker", "Kubernetes", "PostgreSQL"],
+    skills: [
+      "skill_name_full_stack_development",
+      "skill_name_web_design",
+      "skill_name_ui_ux",
+      "skill_name_entrepreneurship",
+      "skill_name_project_management",
+      "skill_name_digital_marketing",
+      "skill_name_visual_identity",
+      "skill_name_branding",
+      "skill_name_customer_service",
+      "skill_name_negotiation"
+    ],
     hiringModelKey: "hiring_model_self_employed",
     workModelKey: "work_model_remote"
   },
@@ -34,7 +44,14 @@ export const experiencesData: Experience[] = [
     startDateKey: "exp_aicury_startDate",
     endDateKey: "exp_aicury_endDate",
     descriptionKey: "exp_aicury_desc",
-    skills: ["Vue.js", "Python", "Spring Boot", "PostgreSQL", "Kafka", "Redis"],
+    skills: [
+      "skill_name_python",
+      "skill_name_flask",
+      "skill_name_docker",
+      "skill_name_rest_api",
+      "skill_name_jira",
+      "skill_name_scrum"
+    ],
     hiringModelKey: "hiring_model_cnpq",
     workModelKey: "work_model_remote"
   },
@@ -49,7 +66,14 @@ export const experiencesData: Experience[] = [
     startDateKey: "exp_tpf_startDate",
     endDateKey: "exp_tpf_endDate",
     descriptionKey: "exp_tpf_desc",
-    skills: ["React", "TypeScript", "Sass", "Jest", "Storybook", "Figma"],
+    skills: [
+      "skill_name_scrum",
+      "skill_name_pitch",
+      "skill_name_multidisciplinary_collaboration",
+      "skill_name_low_code_madrix",
+      "skill_name_erp",
+      "skill_name_sustainability"
+    ],
     hiringModelKey: "hiring_model_temporary",
     workModelKey: "work_model_presential"
   },
@@ -64,7 +88,15 @@ export const experiencesData: Experience[] = [
     startDateKey: "exp_cesar_startDate",
     endDateKey: "exp_cesar_endDate",
     descriptionKey: "exp_cesar_desc",
-    skills: ["Selenium", "Cypress", "Jira", "Postman", "TypeScript"],
+    skills: [
+      "skill_name_quality_assurance",
+      "skill_name_test_cases",
+      "skill_name_bug_reporting",
+      "skill_name_leadership",
+      "skill_name_documentation",
+      "skill_name_collaborative_work",
+      "skill_name_task_management"
+    ],
     hiringModelKey: "hiring_model_temporary",
     workModelKey: "work_model_remote"
   },
@@ -79,7 +111,18 @@ export const experiencesData: Experience[] = [
     startDateKey: "exp_unicap_startDate",
     endDateKey: "exp_unicap_endDate",
     descriptionKey: "exp_unicap_desc",
-    skills: ["Java", "Spring Framework", "MySQL", "Docker"],
+    skills: [
+      "skill_name_object_oriented_programming",
+      "skill_name_design_thinking",
+      "skill_name_databases",
+      "skill_name_project_management",
+      "skill_name_statistics_probability",
+      "skill_name_programming_logic",
+      "skill_name_frontend_react",
+      "skill_name_mobile_flutter",
+      "skill_name_software_testing",
+      "skill_name_operating_systems"
+    ],
     workModelKey: "work_model_presential"
   },
   {
@@ -93,7 +136,16 @@ export const experiencesData: Experience[] = [
     startDateKey: "exp_cmr_startDate",
     endDateKey: "exp_cmr_endDate",
     descriptionKey: "exp_cmr_desc",
-    skills: ["Python", "JavaScript", "HTML", "CSS"],
+    skills: [
+      "skill_name_communication",
+      "skill_name_leadership",
+      "skill_name_public_speaking",
+      "skill_name_discipline",
+      "skill_name_writing",
+      "skill_name_logic",
+      "skill_name_basic_math",
+      "skill_name_teamwork"
+    ],
     workModelKey: "work_model_presential"
   },
 ];

@@ -1,6 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-// src/components/sections/GGABSSection.tsx
 "use client";
 
 import type React from "react";
