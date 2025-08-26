@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-// src/components/sections/AboutSection.tsx
 "use client";
 
 import type React from "react";

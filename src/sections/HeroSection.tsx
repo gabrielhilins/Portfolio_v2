@@ -3,7 +3,7 @@
 import type React from "react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FaGithub, FaLinkedinIn, FaInstagram, FaChevronDown, FaFileAlt } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaChevronDown, FaFileAlt } from "react-icons/fa";
 import { GrProjects } from "react-icons/gr";
 import { FaRegHandshake } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";

@@ -1,4 +1,4 @@
-import { FaLightbulb, FaBullseye, FaComments, FaClock, FaFlag, FaPuzzlePiece, FaGlobe, FaBook, FaBriefcase, FaRocket, FaHandshake, FaMicrophone, FaShieldAlt, FaUsers } from 'react-icons/fa';
+import { FaLightbulb, FaBullseye, FaComments, FaClock, FaFlag, FaPuzzlePiece, FaGlobe, FaBook, FaRocket, FaHandshake, FaMicrophone, FaShieldAlt, FaUsers } from 'react-icons/fa';
 import { HardSkillsCategories, SoftSkill } from './types';
 import { AiOutlineSwap } from "react-icons/ai";
 
