@@ -1,6 +1,6 @@
 // src/lib/index.ts
 import { textData } from './text-content';
-import { projectsData } from './projects-data';
+import { projectsWithIds } from './projects-data';
 import { experiencesData } from './experiences-data';
 import { certificatesData } from './certificates-data';
 import { hardSkillsData, softSkillsData } from './skills-data';
@@ -18,7 +18,7 @@ interface PortfolioData {
 export const portfolioData = (language: "pt" | "en"): PortfolioData => {
   return {
     text: textData[language],
-    projects: projectsData,
+    projects: projectsWithIds,
     experiences: experiencesData,
     certificates: certificatesData,
     hardSkills: hardSkillsData,

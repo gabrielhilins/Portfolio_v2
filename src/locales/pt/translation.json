@@ -13,6 +13,7 @@
   "hero_subtitle": "Entusiasta em desenvolver soluções inovadoras com tecnologia, design e impacto!",
   "hero_cta1": "Ver Projetos",
   "hero_cta2": "Conectar",
+  "hero_cta_download_resume": "Baixar Currículo em PDF",
   "hero_scrollDown": "Role para baixo",
   "about_title": "Sobre Mim",
   "about_subtitle": "Minha trajetória em Desenvolvimento de Software",
@@ -129,8 +130,10 @@
   "project_ref_description": "O REF é um gerador de referências no formato ABNT moderno e intuitivo. Criado para facilitar a vida de estudantes, professores e pesquisadores na criação de referências bibliográficas precisas e padronizadas.",
   "project_semprenicea_title": "SEMPRE NICEA",
   "project_semprenicea_description": "Sempre Nicea é uma plataforma digital desenvolvida para centralizar, organizar e divulgar pesquisas acadêmicas sobre o Concílio de Niceia (325 d.C.), promovendo o acesso a conteúdos confiáveis e incentivando a colaboração entre pesquisadores de diversos países.",
-  "project_portfolio_v1_title": "Meu Portfólio V1",
+  "project_portfolio_v1_title": "Meu Portfólio v1.0",
   "project_portfolio_v1_description": "Meu Portfólio (primeira versão) é uma vitrine digital que destaca minha jornada como desenvolvedor Full Stack em formação. Com design minimalista e animações sutis, mas originais, o portfólio é totalmente traduzido em português e inglês, proporcionando uma experiência visual e funcional para explorar meus projetos e habilidades.",
+  "project_portfolio_v2_title": "Meu Portfólio v2.0",
+  "project_portfolio_v2_description": "Esta nova versão do meu portfólio representa um completo rebranding, marcando minha evolução como desenvolvedor Full Stack. Ele combina um design minimalista e profissional com animações originais que mantêm minha identidade visual.",
   "project_real_title": "REAL",
   "project_real_description": "O REAL - Simulador de Orçamentos é uma solução digital que automatiza a criação de orçamentos personalizados, tornando o processo mais rápido, claro e profissional. Com integração ao WhatsApp, ele permite que empresas gerem orçamentos instantâneos para seus clientes, otimizando tempo, captando leads e aumentando conversões. Fácil de integrar ao Instagram ou site, o REAL transforma a experiência de orçamentos em algo ágil e eficiente.",
   "project_marvel_title": "Marvel Characters",
@@ -233,26 +236,35 @@
   "contact_title": "Conecte-se Comigo",
   "contact_subtitle": "Para oportunidades, colaborações ou discussões técnicas",
   "contact_description": "Estou sempre aberto a novas conexões e a discutir desafios na área de tecnologia. Seja para oportunidades de carreira, colaborações em projetos ou simplesmente para trocar ideias sobre as últimas tendências, sinta-se à vontade para entrar em contato.",
-  "contact_form_name": "Nome",
-  "contact_form_email": "E-mail",
-  "contact_form_message": "Mensagem",
-  "contact_form_send": "Enviar Mensagem",
-  "contact_form_name_placeholder": "Seu nome completo",
-  "contact_form_email_placeholder": "seu@email.com",
-  "contact_form_message_placeholder": "Descreva sua proposta ou interesse...",
   "contact_info_title": "Informações de Contato",
   "contact_info_email": "gabrielhilins@gmail.com",
   "contact_info_phone": "+55 (81) 99903-4034",
   "contact_info_location": "Recife, Pernambuco, Brasil",
   "contact_info_location_label": "Localização",
   "contact_social": "Redes Sociais",
-  "contact_form_name_required": "Nome é obrigatório",
-  "contact_form_email_required": "Email é obrigatório",
-  "contact_form_email_invalid": "Email inválido",
-  "contact_form_message_required": "Mensagem é obrigatória",
+  "contact_form_title": "Envie Sua Mensagem",
+  "contact_form_subtitle": "Preencha o formulário abaixo e entrarei em contato o mais breve possível.",
+  "contact_form_send": "Enviar Mensagem",
+  "contact_form_sending": "Enviando...",
+  "contact_form_name": "Seu Nome",
+  "contact_form_name_placeholder": "Nome completo",
+  "contact_form_name_required": "O nome é obrigatório",
+  "contact_form_email": "Seu Email",
+  "contact_form_email_placeholder": "email@exemplo.com",
+  "contact_form_email_required": "O email é obrigatório",
+  "contact_form_email_invalid": "Por favor, insira um email válido",
+  "contact_form_message": "Sua Mensagem",
+  "contact_form_message_placeholder": "Escreva sua mensagem aqui...",
+  "contact_form_message_required": "A mensagem é obrigatória",
   "contact_form_validation_error": "Por favor, corrija os erros no formulário",
   "contact_form_success": "Mensagem enviada com sucesso!",
   "contact_form_error": "Ocorreu um erro ao enviar a mensagem. Tente novamente.",
+  "contact_form_cta_title": "Pronto para Colaborar?",
+  "contact_form_cta_subtitle": "Entre em contato comigo através do formulário para discutir projetos, ideias ou oportunidades.",
+  "contact_form_cta_button": "Enviar Mensagem",
+  "contact_back_button": "Voltar para página inicial",
+  "contact_whatsapp_option_text": "Ou prefere uma conversa mais direta? Entre em contato pelo WhatsApp!",
+  "contact_whatsapp_button_text": "Iniciar Conversa via WhatsApp",
   "footer_slogan": "Construindo o futuro da tecnologia, uma linha de código por vez.",
   "footer_copyright": "© 2025 Gabriel Henrique Lins. v2.0. Todos os direitos reservados.",
   "tooltip_github": "Ver perfil no GitHub",
@@ -264,5 +276,48 @@
   "tooltip_footer_github": "Ver perfil no GitHub",
   "tooltip_footer_linkedin": "Ver perfil no LinkedIn",
   "tooltip_footer_instagram": "Ver perfil no Instagram",
-  "tooltip_footer_resume": "Ver meu Currículo"
+  "tooltip_footer_resume": "Ver meu Currículo",
+  "links_title": "Gabriel Henrique Lins",
+  "links_description": "Desenvolvedor Full Stack e Fundador da <a href='https://www.ggabstechdesign.com.br/' target='_blank' rel='noopener noreferrer' class='underline text-muted-foreground hover:text-secondary transition-colors'>GGABS TECH & DESIGN</a>",
+  "links": [
+    {
+      "id": 1,
+      "title": "Meu Portfólio Profissional",
+      "url": "/home",
+      "highlight": true
+    },
+    {
+      "id": 2,
+      "title": "Meu currículo",
+      "url": null
+    },
+    {
+      "id": 3,
+      "title": "Meu LinkedIn",
+      "url": "https://www.linkedin.com/in/gabriel-henrique-lins/"
+    },
+    {
+      "id": 4,
+      "title": "Meu Github",
+      "url": "https://www.github.com/gabrielhilins"
+    },
+    {
+      "id": 5,
+      "title": "Site da minha agência de Tech & Design",
+      "url": "https://www.ggabstechdesign.com.br/"
+    },
+    {
+      "id": 6,
+      "title": "Falar comigo",
+      "url": "/contact"
+    }
+  ],
+  "links_footer": "© {{year}} Gabriel Henrique Lins. Todos os direitos reservados.",
+  "links_modal": {
+    "title": "Visualizar Currículo",
+    "description": "Aqui você pode ver ou baixar o currículo.",
+    "content": "Conteúdo do currículo ou link para download."
+  },
+  "not_found_title": "Página Não Encontrada",
+  "not_found_text": "A página que você está procurando não existe."
 }

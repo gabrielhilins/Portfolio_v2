@@ -6,21 +6,39 @@ import RECDATERRA from '../../public/RECDATERRA.png';
 import SEMPRENICEA from '../../public/SEMPRENICEA.png';
 import DASHBOARDINEP from '../../public/DASHBOARDINEP.png';
 import PORTFOLIOV1 from '../../public/PORTFOLIOV1.png';
+import PORTFOLIOV2 from '../../public/PORTFOLIOV2.png';
 import GGABSTECHDESIGN from '../../public/GGABSTECHDESIGN.png';
 import Caredmindedu from '../../public/CaremindEdu.png';
 
-export const projectsData: Project[] = [
+export const projectsData: Omit<Project, 'id'>[] = [
   {
-    id: 1,
+    titleKey: "project_portfolio_v2_title",
+    descriptionKey: "project_portfolio_v2_description",
+    image: PORTFOLIOV2,
+    technologies: [
+      { nameKey: "skill_name_typescript", name: "TypeScript", icon: "devicon-typescript-plain colored" },
+      { nameKey: "skill_name_tailwind", name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
+      { nameKey: "skill_name_nextjs", name: "Next.js", icon: "devicon-nextjs-plain colored" },
+      { nameKey: "skill_name_swiper", name: "Swiper js", icon: "devicon-swiper-original colored" },
+      { nameKey: "skill_name_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
+    ],
+    liveUrl: "https://gabriel-henrique-lins.vercel.app",
+    featured: true,
+    lastUpdated: "2025-08-30",
+    labelKey: "project_label_personal",
+    githubFrontendUrl: "https://github.com/gabrielhilins/Portfolio_v2",
+    githubBackendUrl: undefined,
+  },
+  {
     titleKey: "project_ggabs_title",
     descriptionKey: "project_ggabs_description",
     image: GGABSTECHDESIGN,
     technologies: [
-      { nameKey: "tech_react", name: "React", icon: "devicon-react-plain colored" },
-      { nameKey: "tech_sass", name: "Sass", icon: "devicon-sass-original colored" },
-      { nameKey: "tech_vite", name: "Vite", icon: "devicon-vitejs-plain colored" },
-      { nameKey: "tech_swiper", name: "Swiper js", icon: "devicon-swiper-original colored" },
-      { nameKey: "tech_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" }
+      { nameKey: "skill_name_react", name: "React", icon: "devicon-react-plain colored" },
+      { nameKey: "skill_name_sass", name: "Sass", icon: "devicon-sass-original colored" },
+      { nameKey: "skill_name_vite", name: "Vite", icon: "devicon-vitejs-plain colored" },
+      { nameKey: "skill_name_swiper", name: "Swiper js", icon: "devicon-swiper-original colored" },
+      { nameKey: "skill_name_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
     ],
     liveUrl: "https://www.ggabstechdesign.com.br/",
     featured: true,
@@ -30,41 +48,39 @@ export const projectsData: Project[] = [
     githubBackendUrl: undefined,
   },
   {
-    id: 2,
     titleKey: "project_ref_title",
     descriptionKey: "project_ref_description",
     image: REF,
     technologies: [
-      { nameKey: "tech_typescript", name: "TypeScript", icon: "devicon-typescript-plain colored" },
-      { nameKey: "tech_tailwind", name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
-      { nameKey: "tech_nextjs", name: "Next.js", icon: "devicon-nextjs-plain colored" },
-      { nameKey: "tech_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" }
+      { nameKey: "skill_name_typescript", name: "TypeScript", icon: "devicon-typescript-plain colored" },
+      { nameKey: "skill_name_tailwind", name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
+      { nameKey: "skill_name_nextjs", name: "Next.js", icon: "devicon-nextjs-plain colored" },
+      { nameKey: "skill_name_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
     ],
     liveUrl: "https://ref-gerador-abnt.vercel.app/",
     githubFrontendUrl: "https://github.com/gabrielhilins/REF_Gerador_ABNT",
     githubBackendUrl: undefined,
     featured: true,
     lastUpdated: "2025-07-03",
-    labelKey: "project_label_personal"
+    labelKey: "project_label_personal",
   },
   {
-    id: 3,
     titleKey: "project_semprenicea_title",
     descriptionKey: "project_semprenicea_description",
     image: SEMPRENICEA,
     technologies: [
-      { nameKey: "tech_typescript", name: "TypeScript", icon: "devicon-typescript-plain colored" },
-      { nameKey: "tech_sass", name: "Sass", icon: "devicon-sass-original colored" },
-      { nameKey: "tech_swiper", name: "Swiper", icon: "devicon-swiper-original colored" },
-      { nameKey: "tech_nextjs", name: "Next.js", icon: "devicon-nextjs-plain colored" },
-      { nameKey: "tech_java", name: "Java", icon: "devicon-java-plain colored" },
-      { nameKey: "tech_spring_boot", name: "Spring Boot", icon: "devicon-spring-original-wordmark colored" },
-      { nameKey: "tech_hibernate", name: "Hibernate", icon: "devicon-hibernate-plain colored" },
-      { nameKey: "tech_swagger", name: "Swagger", icon: "devicon-swagger-plain colored" },
-      { nameKey: "tech_supabase", name: "Supabase", icon: "devicon-supabase-plain colored" },
-      { nameKey: "tech_postgresql", name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
-      { nameKey: "tech_docker", name: "Docker", icon: "devicon-docker-plain colored" },
-      { nameKey: "tech_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
+      { nameKey: "skill_name_typescript", name: "TypeScript", icon: "devicon-typescript-plain colored" },
+      { nameKey: "skill_name_sass", name: "Sass", icon: "devicon-sass-original colored" },
+      { nameKey: "skill_name_swiper", name: "Swiper", icon: "devicon-swiper-original colored" },
+      { nameKey: "skill_name_nextjs", name: "Next.js", icon: "devicon-nextjs-plain colored" },
+      { nameKey: "skill_name_java", name: "Java", icon: "devicon-java-plain colored" },
+      { nameKey: "skill_name_springboot", name: "Spring Boot", icon: "devicon-spring-original-wordmark colored" },
+      { nameKey: "skill_name_hibernate", name: "Hibernate", icon: "devicon-hibernate-plain colored" },
+      { nameKey: "skill_name_swagger", name: "Swagger", icon: "devicon-swagger-plain colored" },
+      { nameKey: "skill_name_supabase", name: "Supabase", icon: "devicon-supabase-plain colored" },
+      { nameKey: "skill_name_postgresql", name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
+      { nameKey: "skill_name_docker", name: "Docker", icon: "devicon-docker-plain colored" },
+      { nameKey: "skill_name_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
     ],
     liveUrl: "https://sempre-nicea-front-neon.vercel.app/",
     githubFrontendUrl: "https://github.com/gabrielhilins/SEMPRENICEA_Frontend",
@@ -79,58 +95,55 @@ export const projectsData: Project[] = [
       { name: "Mayara Nascimento", linkedinUrl: "https://www.linkedin.com/in/mayarawyrlanascimento/" },
       { name: "Pedro Cezar", linkedinUrl: "https://www.linkedin.com/in/pedro-cezarr/" },
       { name: "Yuri Catunda", linkedinUrl: "https://www.linkedin.com/in/yuri-catunda-5316402a3/" },
-    ]
+    ],
   },
   {
-    id: 4,
     titleKey: "project_portfolio_v1_title",
     descriptionKey: "project_portfolio_v1_description",
     image: PORTFOLIOV1,
     technologies: [
-      { nameKey: "tech_react", name: "React", icon: "devicon-react-plain colored" },
-      { nameKey: "tech_chakra_ui", name: "Chakra UI", icon: "devicon-chakraui-plain colored" },
-      { nameKey: "tech_swiper", name: "Swiper js", icon: "devicon-swiper-original colored" },
-      { nameKey: "tech_vite", name: "Vite", icon: "devicon-vitejs-plain colored" },
-      { nameKey: "tech_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
-      { nameKey: "tech_figma", name: "Figma", icon: "devicon-figma-plain colored" }
+      { nameKey: "skill_name_react", name: "React", icon: "devicon-react-plain colored" },
+      { nameKey: "skill_name_chakra_ui", name: "Chakra UI", icon: "devicon-chakraui-plain colored" },
+      { nameKey: "skill_name_swiper", name: "Swiper js", icon: "devicon-swiper-original colored" },
+      { nameKey: "skill_name_vite", name: "Vite", icon: "devicon-vitejs-plain colored" },
+      { nameKey: "skill_name_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
+      { nameKey: "skill_name_figma", name: "Figma", icon: "devicon-figma-plain colored" },
     ],
     liveUrl: "https://portfolio-gabriel-henriques-projects.vercel.app/",
     githubFrontendUrl: "https://github.com/gabrielhilins/Portfolio_v1",
     githubBackendUrl: undefined,
     featured: false,
     lastUpdated: "2025-05-12",
-    labelKey: "project_label_personal"
+    labelKey: "project_label_personal",
   },
   {
-    id: 5,
     titleKey: "project_real_title",
     descriptionKey: "project_real_description",
     image: REAL,
     technologies: [
-      { nameKey: "tech_html", name: "HTML", icon: "devicon-html5-plain colored" },
-      { nameKey: "tech_css", name: "CSS", icon: "devicon-css3-plain colored" },
-      { nameKey: "tech_javascript", name: "Javascript", icon: "devicon-javascript-plain colored" },
-      { nameKey: "tech_vite", name: "Vite", icon: "devicon-vitejs-plain colored" },
-      { nameKey: "tech_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" }
+      { nameKey: "skill_name_html", name: "HTML", icon: "devicon-html5-plain colored" },
+      { nameKey: "skill_name_css", name: "CSS", icon: "devicon-css3-plain colored" },
+      { nameKey: "skill_name_javascript", name: "JavaScript", icon: "devicon-javascript-plain colored" },
+      { nameKey: "skill_name_vite", name: "Vite", icon: "devicon-vitejs-plain colored" },
+      { nameKey: "skill_name_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
     ],
     liveUrl: "https://real-iota-ivory.vercel.app/",
     githubFrontendUrl: "https://github.com/gabrielhilins/REAL_Simulator",
     githubBackendUrl: undefined,
     featured: false,
     lastUpdated: "2025-03-27",
-    labelKey: "project_label_personal"
+    labelKey: "project_label_personal",
   },
   {
-    id: 6,
     titleKey: "project_marvel_title",
     descriptionKey: "project_marvel_description",
     image: MARVEL,
     technologies: [
-      { nameKey: "tech_typescript", name: "TypeScript", icon: "devicon-typescript-plain colored" },
-      { nameKey: "tech_chakra_ui", name: "Chakra UI", icon: "devicon-chakraui-plain colored" },
-      { nameKey: "tech_axios", name: "Axios", icon: "devicon-axios-plain colored" },
-      { nameKey: "tech_vite", name: "Vite", icon: "devicon-vitejs-plain colored" },
-      { nameKey: "tech_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" }
+      { nameKey: "skill_name_typescript", name: "TypeScript", icon: "devicon-typescript-plain colored" },
+      { nameKey: "skill_name_chakra_ui", name: "Chakra UI", icon: "devicon-chakraui-plain colored" },
+      { nameKey: "skill_name_axios", name: "Axios", icon: "devicon-axios-plain colored" },
+      { nameKey: "skill_name_vite", name: "Vite", icon: "devicon-vitejs-plain colored" },
+      { nameKey: "skill_name_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
     ],
     liveUrl: "https://marvel-characters-six.vercel.app/",
     githubFrontendUrl: "https://github.com/gabrielhilins/Marvel_Characters",
@@ -140,20 +153,19 @@ export const projectsData: Project[] = [
     labelKey: "project_label_personal",
   },
   {
-    id: 7,
     titleKey: "project_recdaterra_title",
     descriptionKey: "project_recdaterra_description",
     image: RECDATERRA,
     technologies: [
-      { nameKey: "tech_react", name: "React", icon: "devicon-react-plain colored" },
-      { nameKey: "tech_chakra_ui", name: "Chakra UI", icon: "devicon-chakraui-plain colored" },
-      { nameKey: "tech_nextjs", name: "Next.js", icon: "devicon-nextjs-plain colored" },
-      { nameKey: "tech_java", name: "Java", icon: "devicon-java-plain colored" },
-      { nameKey: "tech_spring", name: "Spring", icon: "devicon-spring-original-wordmark colored" },
-      { nameKey: "tech_hibernate", name: "Hibernate", icon: "devicon-hibernate-plain colored" },
-      { nameKey: "tech_swagger", name: "Swagger", icon: "devicon-swagger-plain colored" },
-      { nameKey: "tech_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
-      { nameKey: "tech_figma", name: "Figma", icon: "devicon-figma-plain colored" }
+      { nameKey: "skill_name_react", name: "React", icon: "devicon-react-plain colored" },
+      { nameKey: "skill_name_chakra_ui", name: "Chakra UI", icon: "devicon-chakraui-plain colored" },
+      { nameKey: "skill_name_nextjs", name: "Next.js", icon: "devicon-nextjs-plain colored" },
+      { nameKey: "skill_name_java", name: "Java", icon: "devicon-java-plain colored" },
+      { nameKey: "skill_name_springboot", name: "Spring Boot", icon: "devicon-spring-original-wordmark colored" },
+      { nameKey: "skill_name_hibernate", name: "Hibernate", icon: "devicon-hibernate-plain colored" },
+      { nameKey: "skill_name_swagger", name: "Swagger", icon: "devicon-swagger-plain colored" },
+      { nameKey: "skill_name_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
+      { nameKey: "skill_name_figma", name: "Figma", icon: "devicon-figma-plain colored" },
     ],
     liveUrl: "https://rec-da-terra-front-end.vercel.app/",
     githubFrontendUrl: "https://github.com/gabrielhilins/RecDaTerra_FrontEnd",
@@ -167,19 +179,18 @@ export const projectsData: Project[] = [
       { name: "Gabriel Henrique Lins", linkedinUrl: "https://www.linkedin.com/in/gabriel-henrique-lins" },
       { name: "Matheus Vinícius", linkedinUrl: "https://www.linkedin.com/in/matheusviniciusgadev/" },
       { name: "Yuri Catunda", linkedinUrl: "https://www.linkedin.com/in/yuri-catunda-5316402a3/" },
-    ]
+    ],
   },
   {
-    id: 8,
     titleKey: "project_dashboard_inep_title",
     descriptionKey: "project_dashboard_inep_description",
     image: DASHBOARDINEP,
     technologies: [
-      { nameKey: "tech_html5", name: "HTML5", icon: "devicon-html5-plain colored" },
-      { nameKey: "tech_css3", name: "CSS3", icon: "devicon-css3-plain colored" },
-      { nameKey: "tech_nodejs", name: "Node.js", icon: "devicon-nodejs-plain colored" },
-      { nameKey: "tech_postgresql", name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
-      { nameKey: "tech_figma", name: "Figma", icon: "devicon-figma-plain colored" }
+      { nameKey: "skill_name_html", name: "HTML5", icon: "devicon-html5-plain colored" },
+      { nameKey: "skill_name_css", name: "CSS3", icon: "devicon-css3-plain colored" },
+      { nameKey: "skill_name_nodejs", name: "Node.js", icon: "devicon-nodejs-plain colored" },
+      { nameKey: "skill_name_postgresql", name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
+      { nameKey: "skill_name_figma", name: "Figma", icon: "devicon-figma-plain colored" },
     ],
     liveUrl: "https://projeto-dashboard-inep.vercel.app/",
     githubFrontendUrl: "https://github.com/gabrielhilins/Projeto-Dashboard-Inep",
@@ -192,17 +203,16 @@ export const projectsData: Project[] = [
       { name: "Gabriel Henrique Lins", linkedinUrl: "https://www.linkedin.com/in/gabriel-henrique-lins" },
       { name: "Luiz Henrique", linkedinUrl: "https://www.linkedin.com/in/luizhenriqueneto/" },
       { name: "Yuri Catunda", linkedinUrl: "https://www.linkedin.com/in/yuri-catunda-5316402a3/" },
-    ]
+    ],
   },
   {
-    id: 9,
     titleKey: "project_caremind_edu_title",
     descriptionKey: "project_caremind_edu_description",
     image: Caredmindedu,
     technologies: [
-      { nameKey: "tech_figma", name: "Figma", icon: "devicon-figma-plain colored" },
-      { nameKey: "tech_canva", name: "Canva", icon: "devicon-canva-plain colored" },
-      { nameKey: "tech_trello", name: "Trello", icon: "devicon-trello-plain colored" }
+      { nameKey: "skill_name_figma", name: "Figma", icon: "devicon-figma-plain colored" },
+      { nameKey: "skill_name_canva", name: "Canva", icon: "devicon-canva-plain colored" },
+      { nameKey: "skill_name_trello", name: "Trello", icon: "devicon-trello-plain colored" },
     ],
     liveUrl: "https://www.figma.com/proto/BMgQQZCjrO3MEqqWg3mYnK/CaremindEdu?type=design&node-id=1-2&t=Fr8BTs7qyt9fwqD3-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2",
     githubFrontendUrl: undefined,
@@ -212,13 +222,21 @@ export const projectsData: Project[] = [
     labelKey: "project_label_academic",
     team: [
       { name: "Arthur Moraes", linkedinUrl: "https://www.linkedin.com/in/arthur-moraes-830815270/" },
-      { name: "Andrey Ranielly", linkedinUrl: "https://www.linkedin.com/in/arthur-moraes-830815270/" },
-      { name: "Alysson Rafael", linkedinUrl: "https://www.linkedin.com/in/arthur-moraes-830815270/" },
-      { name: "Alessandra Mendes", linkedinUrl: "https://www.linkedin.com/in/arthur-moraes-830815270/" },
+      { name: "Andrey Ranielly", linkedinUrl: "https://www.linkedin.com/in/andrey-ranielly/" },
+      { name: "Alysson Rafael", linkedinUrl: "https://www.linkedin.com/in/alysson-rafael/" },
+      { name: "Alessandra Mendes", linkedinUrl: "https://www.linkedin.com/in/alessandra-mendes/" },
       { name: "Gabriel Henrique Lins", linkedinUrl: "https://www.linkedin.com/in/gabriel-henrique-lins" },
-      { name: "Giulia Vieira", linkedinUrl: "https://www.linkedin.com/in/gabriel-henrique-lins" },
-      { name: "Kathulyn Figueroa", linkedinUrl: "https://www.linkedin.com/in/luizhenriqueneto/" },
-      { name: "Matheus Oliveira", linkedinUrl: "https://www.linkedin.com/in/yuri-catunda-5316402a3/" },
-    ]
+      { name: "Giulia Vieira", linkedinUrl: "https://www.linkedin.com/in/giulia-vieira/" },
+      { name: "Kathulyn Figueroa", linkedinUrl: "https://www.linkedin.com/in/kathulyn-figueroa/" },
+      { name: "Matheus Oliveira", linkedinUrl: "https://www.linkedin.com/in/matheus-oliveira-dev/" },
+    ],
   },
 ];
+
+// Sort projects by lastUpdated (most recent first) and assign IDs dynamically
+export const projectsWithIds: Project[] = projectsData
+  .sort((a, b) => new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime())
+  .map((project, index) => ({
+    ...project,
+    id: index + 1,
+  }));

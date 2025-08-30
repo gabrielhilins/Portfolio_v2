@@ -13,11 +13,12 @@
   "hero_subtitle": "Enthusiast in developing innovative solutions with technology, design, and impact!",
   "hero_cta1": "View Projects",
   "hero_cta2": "Connect",
+  "hero_cta_download_resume": "Download Resume as PDF",
   "hero_scrollDown": "Scroll down",
   "about_title": "About Me",
   "about_subtitle": "My Journey in Software Development",
   "about_description": "I'm a 20-year-old Full Stack Developer, proudly born in Recife, the capital of Pernambuco, located in Northeast Brazil. With a degree in Internet Systems from the Catholic University of Pernambuco (UNICAP), I currently work as a Software Engineer in Artificial Intelligence. Additionally, I have my own Technology and Design brand. I have practical experience in academic, personal, and freelance projects carried out through my agency, as well as professional experience in developing AI solutions.",
-  "about_passion": "I'm passionate about creating complete solutions, combining backend logic with intuitive frontend interfaces. My interest in Artificial Intelligence drives me to develop intelligent applications that enhance digital products. I enjoy continuous learning, tackling technical challenges, and applying software engineering best practices to deliver efficient, scalable, and impactful systems.",
+  "about_passion": "I'm passionate about creating complete solutions, combining backend logic with intuitive frontend interfaces. My interest in Artificial Intelligence drives me to develop intelligent applications that enhance digital products. Enjoy continuous learning, tackling technical challenges, and applying software engineering best practices to deliver efficient, scalable, and impactful systems.",
   "about_mission": "My goal is to continue growing as a Full Stack Developer, contributing to innovative teams to create high-quality digital products that combine cutting-edge technology, artificial intelligence, and real value for users and businesses.",
   "skills_title": "Skills",
   "skills_subtitle": "My technical and interpersonal competencies",
@@ -108,7 +109,7 @@
   "skill_name_operating_systems": "Operating Systems Concepts",
   "skill_name_public_speaking": "Public Speaking",
   "skill_name_discipline": "Discipline",
-  "skill_name_writing": "Writing",
+  "skill_name_writing": "Essay",
   "skill_name_logic": "Logic",
   "skill_name_basic_math": "Basic Mathematics",
   "skill_name_teamwork": "Teamwork",
@@ -131,6 +132,8 @@
   "project_semprenicea_description": "Sempre Nicea is a digital platform developed to centralize, organize, and disseminate academic research on the Council of Nicaea (AD 325), promoting access to reliable content and encouraging collaboration among researchers from various countries.",
   "project_portfolio_v1_title": "My Portfolio V1",
   "project_portfolio_v1_description": "My Portfolio (first version) is a digital showcase highlighting my journey as a Full Stack developer in training. With a minimalist design and subtle, yet original animations, the portfolio is fully translated into Portuguese and English, providing a visual and functional experience to explore my projects and skills.",
+  "project_portfolio_v2_title": "My Portfolio v2.0",
+  "project_portfolio_v2_description": "This new version of my portfolio represents a complete rebranding, marking my evolution as a Full Stack Developer. It combines a minimalist and professional design with original animations that maintain my visual identity.",
   "project_real_title": "REAL",
   "project_real_description": "REAL - Budget Simulator is a digital solution that automates the creation of personalized quotes, making the process faster, clearer, and more professional. With WhatsApp integration, it allows businesses to generate instant quotes for their customers, optimizing time, capturing leads, and increasing conversions. Easy to integrate with Instagram or a website, REAL transforms the quoting experience into something agile and efficient.",
   "project_marvel_title": "Marvel Characters",
@@ -237,6 +240,8 @@
   "contact_form_email": "Email",
   "contact_form_message": "Message",
   "contact_form_send": "Send Message",
+  "contact_form_title": "Send your message",
+  "contact_form_subtitle": "Please fill out the form below, and I'll get back to you as soon as possible.",
   "contact_form_name_placeholder": "Your full name",
   "contact_form_email_placeholder": "your@email.com",
   "contact_form_message_placeholder": "Describe your proposal or interest...",
@@ -253,6 +258,12 @@
   "contact_form_validation_error": "Please correct the errors in the form",
   "contact_form_success": "Message sent successfully!",
   "contact_form_error": "An error occurred while sending the message. Please try again.",
+  "contact_form_cta_title": "Ready to Collaborate?",
+  "contact_form_cta_subtitle": "Reach out to me through the form to discuss projects, ideas, or opportunities.",
+  "contact_form_cta_button": "Send Message",
+  "contact_back_button": "Go back to homepage",
+  "contact_whatsapp_option_text": "Or do you prefer a more direct chat? Get in touch via WhatsApp!",
+  "contact_whatsapp_button_text": "Start Chat via WhatsApp",
   "footer_slogan": "Building the future of technology, one line of code at a time.",
   "footer_copyright": "© 2025 Gabriel Henrique Lins. v2.0. All rights reserved.",
   "tooltip_github": "View GitHub profile",
@@ -263,5 +274,49 @@
   "tooltip_scrollDown": "Go to the About Me section",
   "tooltip_footer_github": "View GitHub profile",
   "tooltip_footer_linkedin": "View LinkedIn profile",
-  "tooltip_footer_instagram": "View Instagram profile"
+  "tooltip_footer_instagram": "View Instagram profile",
+  "tooltip_footer_resume": "View my Resume",
+  "links_title": "Gabriel Henrique Lins",
+  "links_description": "Full Stack Developer and Founder of <a href='https://www.ggabstechdesign.com.br/' target='_blank' rel='noopener noreferrer' class='underline text-muted-foreground hover:text-secondary transition-colors'>GGABS TECH & DESIGN</a>",
+  "links": [
+    {
+      "id": 1,
+      "title": "My Professional Portfolio",
+      "url": "/home",
+      "highlight": true
+    },
+    {
+      "id": 2,
+      "title": "My Resume",
+      "url": null
+    },
+    {
+      "id": 3,
+      "title": "My LinkedIn",
+      "url": "https://www.linkedin.com/in/gabriel-henrique-lins/"
+    },
+    {
+      "id": 4,
+      "title": "My Github",
+      "url": "https://www.github.com/gabrielhilins"
+    },
+    {
+      "id": 5,
+      "title": "My Tech & Design Agency Website",
+      "url": "https://www.ggabstechdesign.com.br/"
+    },
+    {
+      "id": 6,
+      "title": "Talk to me",
+      "url": "/contact"
+    }
+  ],
+  "links_footer": "© {{year}} Gabriel Henrique Lins. All rights reserved.",
+  "links_modal": {
+    "title": "View Resume",
+    "description": "Here you can view or download the resume.",
+    "content": "Resume content or download link."
+  },
+  "not_found_title": "Page Not Found",
+  "not_found_text": "The page you are looking for does not exist."
 }

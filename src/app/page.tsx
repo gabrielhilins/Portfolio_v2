@@ -1,4 +1,3 @@
-// src/app/page.tsx
 "use client"
 
 import { useState, useEffect } from "react"
@@ -15,36 +14,22 @@ import CertificatesSection from "@/sections/CertificatesSection"
 import GGABSSection from "@/sections/GGABSSection"
 import ContactSection from "@/sections/ContactSection"
 import { Tooltip } from "react-tooltip"
-import { projectsData } from "@/lib/projects-data"
+import { projectsWithIds } from "@/lib/projects-data"
 import { ToastContainer } from "react-toastify"
+import { useTheme } from "@/hooks/useTheme"
 
 export default function Portfolio() {
-  const [darkMode, setDarkMode] = useState(false)
+  const { darkMode, toggleDarkMode } = useTheme()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const hour = new Date().getHours();
-    const isNight = hour >= 18 || hour < 6;
-    if (isNight) {
-      document.documentElement.classList.add("dark");
-      setDarkMode(true);
-    } else {
-      document.documentElement.classList.remove("dark");
-      setDarkMode(false);
-    }
-
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode)
-    document.documentElement.classList.toggle("dark")
-  }
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -68,7 +53,7 @@ export default function Portfolio() {
       <HeroSection scrollToSection={scrollToSection} />
       <AboutSection />
       <SkillsSection />
-      <ProjectsSection projects={projectsData}/>
+      <ProjectsSection projects={projectsWithIds}/>
       <ExperienceSection />
       <CertificatesSection />
       <GGABSSection />

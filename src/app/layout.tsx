@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Quicksand } from "next/font/google"
 import "./globals.css"
 import I18nProvider from "@/locales/I18nProvider"
+import { Analytics } from "@vercel/analytics/next"
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
       </head>
       <body className="font-quicksand antialiased">
         <I18nProvider>{children}</I18nProvider>
+        <Analytics />
       </body>
     </html>
   )
