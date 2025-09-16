@@ -10,13 +10,12 @@ import Link from "next/link";
 import { cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import { useTranslation } from "react-i18next";
-import GabrielPhoto from "../../../public/GabrielHenriqueLins.jpg";
+import GabrielPhoto from "../../../public/DSC_5650.jpg";
 import ThemeSwitcher from "@/components/common/ThemeSwitcher";
 import LanguageSwitcher from "@/components/common/LanguageSwitcher";
 import { useTheme } from "@/hooks/useTheme";
 import ResumeModal from "@/components/common/ResumeModal";
 
-// Classes de variantes para os links, ajustadas para usar as cores do tema
 const linkVariants = cva(
   "flex items-center space-x-4 w-full p-4 rounded-md shadow-lg transition-all transform hover:translate-y-[-2px] hover:scale-[1.03] hover:shadow-xl",
   {
@@ -40,7 +39,6 @@ interface LinkItem {
   highlight?: boolean;
 }
 
-// Define the structure of the links in the translation file
 interface TranslationLink {
   id: number;
   title: string;
@@ -113,7 +111,7 @@ const LinksPage = () => {
               src={GabrielPhoto}
               alt={t("links_title")}
               fill
-              className="rounded-full object-cover"
+              className="rounded-full object-cover object-top"
             />
           </div>
           <div className="flex flex-row items-center space-x-4 mt-2 mb-4">
