@@ -3,7 +3,7 @@
 import type React from "react";
 import { useTranslation } from 'react-i18next';
 import Image from "next/image";
-import GabrielHenriqueLins from '../../public/DSC_5688.JPG'
+import GabrielHenriqueLins from '../../public/DSC_5688.jpg'
 
 export default function AboutSection() {
   const { t } = useTranslation();
