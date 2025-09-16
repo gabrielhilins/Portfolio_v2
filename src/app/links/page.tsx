@@ -10,7 +10,7 @@ import Link from "next/link";
 import { cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import { useTranslation } from "react-i18next";
-import GabrielPhoto from "../../../public/DSC_5650.jpg";
+import GabrielPhoto from "../../../public/DSC_5650.png";
 import ThemeSwitcher from "@/components/common/ThemeSwitcher";
 import LanguageSwitcher from "@/components/common/LanguageSwitcher";
 import { useTheme } from "@/hooks/useTheme";
