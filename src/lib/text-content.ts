@@ -44,6 +44,9 @@ export const textData: Record<"pt" | "en", TextContent> = {
         devops: "DevOps & Cloud",
         databases: "Banco de Dados",
         methodologies: "Metodologia ágil",
+        versioning: "Versionamento e Documentação",
+        styling: "Estilização",
+        tests: "Testes"
       },
     },
     projects: {
@@ -176,6 +179,9 @@ export const textData: Record<"pt" | "en", TextContent> = {
         devops: "DevOps & Cloud",
         databases: "Databases",
         methodologies: "Agile Methodology",
+        versioning: "Versioning & Documentation",
+        styling: "Styling",
+        tests: "Testing"
       },
     },
     projects: {

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FaCodeBranch, FaEllipsisH, FaGitAlt, FaProjectDiagram, FaVial } from "react-icons/fa";
+import { FaCodeBranch, FaEllipsisH, FaVial } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
 import { HardSkill, SoftSkill } from "@/lib/types";
 import { IoCodeSlash } from "react-icons/io5";
