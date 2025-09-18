@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfólio V2
 
-## Getting Started
+Bem-vindo ao repositório do meu site de portfólio! Este projeto é uma vitrine dos meus trabalhos, habilidades e experiências como desenvolvedor(a). O site foi desenvolvido com foco em design responsivo, usabilidade e performance, destacando meus projetos e competências técnicas.
 
-First, run the development server:
+## Sobre o Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Este repositório contém o código-fonte do meu site de portfólio pessoal. O site apresenta uma interface moderna e intuitiva, com seções para exibir projetos, informações sobre mim e formas de contato. Ele foi construído para demonstrar minhas habilidades em desenvolvimento web e minha capacidade de criar experiências digitais de qualidade.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologias Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Typescript
+- Tailwind CSS
+- Next.Js
+- Resend
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Como Executar o Projeto Localmente
 
-## Learn More
+Siga os passos abaixo para rodar o site do portfólio localmente:
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Acesse o diretório do projeto**:
+   ```bash
+   cd seu-repositorio
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+4. **Inicie o servidor de desenvolvimento**:
+   ```bash
+   npm start
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Abra o navegador e acesse `http://localhost:3000`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Estrutura do Repositório
+
+- `/src`: Código-fonte do site (componentes, estilos, scripts, etc.).
+- `/public`: Arquivos estáticos, como imagens, ícones e outros recursos.
+- `README.md`: Este arquivo com informações sobre o projeto.
+
+## Funcionalidades do Site
+
+- **Hero**
+- **Projetos**
+- **Sobre**
+- **Contato**
+- **Experiências**
+- **Habilidades Técnicas e Interpessoais**
+
+## Projetos em Destaque no Portfólio
+
+- **[Landing Page - GGABS TECH & DESIGN]**
+- **[SEMPRE NICEA]**
+
+## Hospedagem
+
+O site está hospedado na plataforma Vercel. Acesse o portfólio online em: [https://gabriel-henrique-lins.vercel.app/](https://gabriel-henrique-lins.vercel.app/).
+
+## Contato
+
+Quer conversar sobre projetos, colaborações ou oportunidades? Entre em contato comigo:
+
+- **Email**: [mailto:gabrielhilins@gmail.com](mailto:gabrielhilins@gmail.com)
+- **LinkedIn**: [https://www.linkedin.com/in/gabriel-henrique-lins/](https://www.linkedin.com/in/gabriel-henrique-lins/)
+- **GitHub**: [https://github.com/gabrielhilins](https://github.com/gabrielhilins)
