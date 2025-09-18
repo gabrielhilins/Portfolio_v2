@@ -1,13 +1,16 @@
 "use client";
 
 import type React from "react";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FaGithub, FaLinkedinIn, FaChevronDown, FaFileAlt } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaChevronDown,
+  FaFileAlt,
+} from "react-icons/fa";
 import { GrProjects } from "react-icons/gr";
 import { FaRegHandshake } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
-import ResumeModal from "../components/common/ResumeModal";
 
 interface HeroSectionProps {
   scrollToSection: (sectionId: string) => void;
@@ -15,25 +18,11 @@ interface HeroSectionProps {
 
 export default function HeroSection({ scrollToSection }: HeroSectionProps) {
   const { t, i18n } = useTranslation();
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const curriculoPTURL =
-    "https://docs.google.com/document/d/1sc9UWKLyZEcTQIUAUYoWo0BrBVBuwwtoE7-M7I8bxDk/pub?embedded=true";
-  const pdfCurriculoPTURL =
-    "https://docs.google.com/document/d/1sc9UWKLyZEcTQIUAUYoWo0BrBVBuwwtoE7-M7I8bxDk/export?format=pdf";
-
-  const curriculoENURL =
-    "https://docs.google.com/document/d/1sSgFU1u_diYgDnnpqVwuKLdlw5nwr7wee0tjY90Swsk/pub?embedded=true";
-  const pdfCurriculoENURL =
-    "https://docs.google.com/document/d/1sSgFU1u_diYgDnnpqVwuKLdlw5nwr7wee0tjY90Swsk/export?format=pdf";
-
-  // Função para obter o URL do currículo com base no idioma
-  const getCurriculoURL = () => {
-    return i18n.language === "en" ? curriculoENURL : curriculoPTURL;
-  };
-
-  const getPdfCurriculoURL = () => {
-    return i18n.language === "en" ? pdfCurriculoENURL : pdfCurriculoPTURL;
+  const getResumeURL = () => {
+    return i18n.language === "en"
+      ? "/Gabriel_Henrique_Lins_EN_CV.pdf"
+      : "/Gabriel_Henrique_Lins_CV.pdf";
   };
 
   return (
@@ -46,29 +35,24 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
 
       {/* Conteúdo principal da seção Hero */}
       <div className="max-w-4xl mx-auto text-center animate-fade-in relative z-10">
-        {/* Saudação inicial */}
         <p className="text-lg text-muted-foreground mb-4 font-light animate-slide-up">
           {t("hero_greeting")}
         </p>
 
-        {/* Nome do usuário com gradiente e animação */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-slide-up bg-[length:200%_100%] animate-[gradient_3s_ease-in-out_infinite]">
           {t("hero_name")}
         </h1>
 
-        {/* Título/cargo do usuário */}
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground mb-8 animate-slide-up">
           {t("hero_title")}
         </h2>
 
-        {/* Subtítulo ou breve descrição */}
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8 animate-slide-up">
           {t("hero_subtitle")}
         </p>
 
         {/* Links para redes sociais e currículo */}
         <div className="flex items-center justify-center gap-6 mb-12 animate-slide-up">
-          {/* Link para o GitHub */}
           <a
             href="https://github.com/gabrielhilins"
             target="_blank"
@@ -79,7 +63,6 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
           >
             <FaGithub className="h-5 w-5" />
           </a>
-          {/* Link para o LinkedIn */}
           <a
             href="https://linkedin.com/in/gabriel-henrique-lins"
             target="_blank"
@@ -90,20 +73,21 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
           >
             <FaLinkedinIn className="h-5 w-5" />
           </a>
-          {/* Botão para abrir o modal do currículo */}
-          <button
-            onClick={() => setIsModalOpen(true)}
+          {/* Botão para abrir o currículo */}
+          <a
+            href={getResumeURL()}
+            target="_blank"
+            rel="noopener noreferrer"
             className="p-3 rounded-full bg-accent hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 cursor-pointer"
             data-tooltip-id="resume-tooltip"
             data-tooltip-content={t("tooltip_resume")}
           >
             <FaFileAlt className="h-5 w-5" />
-          </button>
+          </a>
         </div>
 
         {/* Botões de CTA (Chamada para Ação) */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-slide-up">
-          {/* Botão para ver os projetos, com o ícone GrProjects */}
           <Button
             size="lg"
             onClick={() => scrollToSection("projects")}
@@ -111,10 +95,9 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
             data-tooltip-id="view-projects-tooltip"
             data-tooltip-content={t("tooltip_viewProjects")}
           >
-            <GrProjects className="h-5 w-5" /> {/* Ícone para Projetos */}
+            <GrProjects className="h-5 w-5" /> 
             {t("hero_cta1")}
           </Button>
-          {/* Botão para conectar, com o ícone FaRegHandshake */}
           <Button
             variant="outline"
             size="lg"
@@ -123,7 +106,7 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
             data-tooltip-id="connect-tooltip"
             data-tooltip-content={t("tooltip_connect")}
           >
-            <FaRegHandshake className="h-5 w-5" /> {/* Ícone para Conectar */}
+            <FaRegHandshake className="h-5 w-5" /> 
             {t("hero_cta2")}
           </Button>
         </div>
@@ -140,15 +123,6 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
             <FaChevronDown className="h-5 w-5" />
           </button>
         </div>
-
-        <ResumeModal
-          isOpen={isModalOpen}
-          onOpenChange={setIsModalOpen}
-          curriculumUrl={getCurriculoURL()}
-          pdfUrl={getPdfCurriculoURL()}
-          title={t("tooltip_resume")}
-          downloadButtonText={t("hero_cta_download_resume", { defaultValue: "Download Resume as PDF" })}
-        />
       </div>
     </section>
   );

@@ -1,36 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
-import { FaGithub, FaLinkedinIn, FaInstagram, FaFileAlt } from "react-icons/fa";
-import ResumeModal from "@/components/common/ResumeModal";
+import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 interface FooterProps {
   scrollToSection: (sectionId: string) => void;
 }
 
 export default function Footer({ scrollToSection }: FooterProps) {
-  const { t, i18n } = useTranslation();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const curriculoPTURL =
-    "https://docs.google.com/document/d/1sc9UWKLyZEcTQIUAUYoWo0BrBVBuwwtoE7-M7I8bxDk/pub?embedded=true";
-  const pdfCurriculoPTURL =
-    "https://docs.google.com/document/d/1sc9UWKLyZEcTQIUAUYoWo0BrBVBuwwtoE7-M7I8bxDk/export?format=pdf";
-
-  const curriculoENURL =
-    "https://docs.google.com/document/d/1sSgFU1u_diYgDnnpqVwuKLdlw5nwr7wee0tjY90Swsk/pub?embedded=true";
-  const pdfCurriculoENURL =
-    "https://docs.google.com/document/d/1sSgFU1u_diYgDnnpqVwuKLdlw5nwr7wee0tjY90Swsk/export?format=pdf";
-
-  // Função para obter o URL do currículo com base no idioma
-  const getCurriculoURL = () => {
-    return i18n.language === "en" ? curriculoENURL : curriculoPTURL;
-  };
-
-  const getPdfCurriculoURL = () => {
-    return i18n.language === "en" ? pdfCurriculoENURL : pdfCurriculoPTURL;
-  };
+  const { t } = useTranslation();
 
   return (
     <footer className="bg-muted/50 py-12 px-4 sm:px-6 lg:px-8">
@@ -80,14 +59,6 @@ export default function Footer({ scrollToSection }: FooterProps) {
           >
             <FaInstagram className="h-5 w-5" />
           </a>
-          <button
-            onClick={() => setIsModalOpen(true)}
-            className="p-3 rounded-full bg-accent hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 cursor-pointer"
-            data-tooltip-id="footer-resume-tooltip"
-            data-tooltip-content={t("tooltip_resume")}
-          >
-            <FaFileAlt className="h-5 w-5" />
-          </button>
         </div>
 
         <div className="border-t border-border pt-8">
@@ -96,15 +67,6 @@ export default function Footer({ scrollToSection }: FooterProps) {
           </p>
         </div>
 
-        {/* Modal reutilizável para exibir o currículo */}
-        <ResumeModal
-          isOpen={isModalOpen}
-          onOpenChange={setIsModalOpen}
-          curriculumUrl={getCurriculoURL()}
-          pdfUrl={getPdfCurriculoURL()}
-          title={t("tooltip_resume")}
-          downloadButtonText={t("hero_cta_download_resume", { defaultValue: "Download Resume as PDF" })}
-        />
       </div>
     </footer>
   );

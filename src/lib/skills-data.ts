@@ -5,26 +5,31 @@ import { AiOutlineSwap } from "react-icons/ai";
 
 // Single source of truth for hard skills data, using translation keys
 export const hardSkillsData: HardSkillsCategories = {
-  frontend: [
-    { nameKey: "skill_name_react", icon: "devicon-react-plain colored", levelKey: "skill_level_advanced" },
-    { nameKey: "skill_name_html", icon: "devicon-html5-plain colored", levelKey: "skill_level_advanced" },
-    { nameKey: "skill_name_css", icon: "devicon-css3-plain colored", levelKey: "skill_level_advanced" },
-    { nameKey: "skill_name_sass", icon: "devicon-sass-original colored", levelKey: "skill_level_advanced" },
-    { nameKey: "skill_name_tailwind", icon: "devicon-tailwindcss-plain colored", levelKey: "skill_level_basic" },
-    { nameKey: "skill_name_javascript", icon: "devicon-javascript-plain colored", levelKey: "skill_level_advanced" },
-    { nameKey: "skill_name_typescript", icon: "devicon-typescript-plain colored", levelKey: "skill_level_intermediate" },
-    { nameKey: "skill_name_nextjs", icon: "devicon-nextjs-plain colored", levelKey: "skill_level_intermediate" },
-    { nameKey: "skill_name_vite", icon: "devicon-vitejs-plain colored", levelKey: "skill_level_advanced" },
-  ],
   backend: [
     { nameKey: "skill_name_java", icon: "devicon-java-plain colored", levelKey: "skill_level_advanced" },
     { nameKey: "skill_name_springboot", icon: "devicon-spring-original-wordmark colored", levelKey: "skill_level_advanced" },
-    { nameKey: "skill_name_junit", icon: "devicon-junit-plain colored", levelKey: "skill_level_basic" },
+    { nameKey: "skill_name_hibernate", icon: "devicon-hibernate-plain colored", levelKey: "skill_level_advanced" },
     { nameKey: "skill_name_nodejs", icon: "devicon-nodejs-plain colored", levelKey: "skill_level_intermediate" },
     { nameKey: "skill_name_express", icon: "devicon-express-original colored", levelKey: "skill_level_intermediate" },
+    { nameKey: "skill_name_sequelize", icon: "devicon-sequelize-plain colored", levelKey: "skill_level_intermediate" },
     { nameKey: "skill_name_python", icon: "devicon-python-plain colored", levelKey: "skill_level_basic" },
-    { nameKey: "skill_name_swagger", icon: "devicon-swagger-plain colored", levelKey: "skill_level_advanced" },
-    { nameKey: "skill_name_postman", icon: "devicon-postman-plain colored", levelKey: "skill_level_advanced" },
+    { nameKey: "skill_name_fastapi", icon: "devicon-fastapi-original colored", levelKey: "skill_level_basic" },
+    { nameKey: "skill_name_flask", icon: "devicon-flask-original colored", levelKey: "skill_level_basic" },
+  ],
+  frontend: [
+    { nameKey: "skill_name_react", icon: "devicon-react-plain colored", levelKey: "skill_level_advanced" },
+    { nameKey: "skill_name_typescript", icon: "devicon-typescript-plain colored", levelKey: "skill_level_intermediate" },
+    { nameKey: "skill_name_javascript", icon: "devicon-javascript-plain colored", levelKey: "skill_level_advanced" },
+    { nameKey: "skill_name_html", icon: "devicon-html5-plain colored", levelKey: "skill_level_advanced" },
+    { nameKey: "skill_name_nextjs", icon: "devicon-nextjs-plain colored", levelKey: "skill_level_intermediate" },
+    { nameKey: "skill_name_vite", icon: "devicon-vitejs-plain colored", levelKey: "skill_level_advanced" },
+  ],
+  styling: [
+    { nameKey: "skill_name_css", icon: "devicon-css3-plain colored", levelKey: "skill_level_advanced" },
+    { nameKey: "skill_name_sass", icon: "devicon-sass-original colored", levelKey: "skill_level_advanced" },
+    { nameKey: "skill_name_tailwind", icon: "devicon-tailwindcss-plain colored", levelKey: "skill_level_basic" },
+    { nameKey: "skill_name_shadcn", icon: "https://ui.shadcn.com/apple-touch-icon.png", levelKey: "skill_level_basic" },
+    { nameKey: "skill_name_chakraui", icon: "devicon-chakraui-plain colored", levelKey: "skill_level_basic" },
   ],
   databases: [
     { nameKey: "skill_name_postgresql", icon: "devicon-postgresql-plain colored", levelKey: "skill_level_intermediate" },
@@ -33,10 +38,10 @@ export const hardSkillsData: HardSkillsCategories = {
     { nameKey: "skill_name_mongodb", icon: "devicon-mongodb-plain colored", levelKey: "skill_level_basic" },
   ],
   devops: [
-    { nameKey: "skill_name_git", icon: "devicon-github-plain colored", levelKey: "skill_level_advanced" },
     { nameKey: "skill_name_docker", icon: "devicon-docker-plain colored", levelKey: "skill_level_basic" },
-    { nameKey: "skill_name_grafana", icon: "devicon-grafana-plain colored", levelKey: "skill_level_basic" },
-    { nameKey: "skill_name_vercel", icon: "devicon-vercel-plain colored", levelKey: "skill_level_advanced" },
+    { nameKey: "skill_name_terraform", icon: "devicon-terraform-plain colored", levelKey: "skill_level_basic" },
+    { nameKey: "skill_name_jenkins", icon: "devicon-jenkins-plain colored", levelKey: "skill_level_basic" },
+    { nameKey: "skill_name_githubactions", icon: "devicon-githubactions-plain colored", levelKey: "skill_level_basic" },
   ],
   design: [
     { nameKey: "skill_name_figma", icon: "devicon-figma-plain colored", levelKey: "skill_level_advanced" },
@@ -47,6 +52,18 @@ export const hardSkillsData: HardSkillsCategories = {
     { nameKey: "skill_name_notion", icon: "devicon-notion-plain", levelKey: "skill_level_intermediate" },
     { nameKey: "skill_name_jira", icon: "devicon-jira-plain colored", levelKey: "skill_level_basic" },
   ],
+  tests: [
+    { nameKey: "skill_name_junit", icon: "devicon-junit-plain colored", levelKey: "skill_level_basic" },
+    { nameKey: "skill_name_pytest", icon: "devicon-pytest-plain colored", levelKey: "skill_level_basic" },
+    { nameKey: "skill_name_jest", icon: "devicon-jest-plain colored", levelKey: "skill_level_basic" },
+    
+  ],
+  versioning: [
+    { nameKey: "skill_name_git", icon: "devicon-git-plain colored", levelKey: "skill_level_advanced" },
+    { nameKey: "skill_name_github", icon: "devicon-github-plain colored", levelKey: "skill_level_advanced" },
+    { nameKey: "skill_name_swagger", icon: "devicon-swagger-plain colored", levelKey: "skill_level_advanced" },
+    { nameKey: "skill_name_apidog", icon: "https://assets.apidog.com/static/logo/apidog-logo-256.png", levelKey: "skill_level_basic" },
+  ]
 };
 
 // Single source of truth for soft skills data, using translation keys

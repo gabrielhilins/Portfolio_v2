@@ -2,18 +2,19 @@
 
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FaProjectDiagram } from "react-icons/fa";
+import { FaCodeBranch, FaEllipsisH, FaGitAlt, FaProjectDiagram, FaVial } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
 import { HardSkill, SoftSkill } from "@/lib/types";
 import { IoCodeSlash } from "react-icons/io5";
 import { HiUserGroup } from "react-icons/hi";
-import { CgScreen } from "react-icons/cg";
+import { CgColorPicker, CgScreen } from "react-icons/cg";
 import { BsStack } from "react-icons/bs";
 import { FaPalette, FaInfinity } from "react-icons/fa";
 import { HiCircleStack } from "react-icons/hi2";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { hardSkillsData, softSkillsData } from "@/lib/skills-data";
+import { RiFlowChart } from "react-icons/ri";
 
 export default function SkillsSection() {
   const { t } = useTranslation();
@@ -100,10 +101,12 @@ export default function SkillsSection() {
                   <h4 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
                     {(() => {
                       switch (category) {
-                        case "frontend":
-                          return <CgScreen className="text-primary text-xl mr-1" />;
                         case "backend":
                           return <BsStack className="text-primary text-xl mr-1" />;
+                        case "frontend":
+                          return <CgScreen className="text-primary text-xl mr-1" />;
+                        case "styling":
+                          return <CgColorPicker className="text-primary text-xl mr-1" />;
                         case "design":
                           return <FaPalette className="text-primary text-xl mr-1" />;
                         case "devops":
@@ -111,7 +114,13 @@ export default function SkillsSection() {
                         case "databases":
                           return <HiCircleStack className="text-primary text-xl mr-1" />;
                         case "methodologies":
-                          return <FaProjectDiagram className="text-primary text-xl mr-1" />;
+                          return <RiFlowChart className="text-primary text-xl mr-1" />;
+                        case "tests":
+                          return <FaVial className="text-primary text-xl mr-1" />;
+                        case "versioning":
+                          return <FaCodeBranch className="text-primary text-xl mr-1" />;
+                        case "others":
+                          return <FaEllipsisH className="text-primary text-xl mr-1" />;
                         default:
                           return null;
                       }

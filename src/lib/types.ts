@@ -44,11 +44,14 @@ export interface TextContent {
     softSkills: string;
     categories: {
       frontend: string;
+      styling: string;
       backend: string;
       design: string;
       devops: string;
       databases: string;
       methodologies: string;
+      tests: string;
+      versioning: string;
     };
   };
   projects: {
@@ -204,4 +207,7 @@ export interface HardSkillsCategories {
   devops: HardSkill[];
   databases: HardSkill[];
   methodologies: HardSkill[];
+  styling: HardSkill[];
+  tests: HardSkill[];
+  versioning: HardSkill[];
 }
