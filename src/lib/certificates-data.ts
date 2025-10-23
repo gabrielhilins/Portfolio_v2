@@ -10,6 +10,7 @@ import MagaluCloud from '../../public/Certificado RFEC_MagaluCloud.png';
 import InglesEasy from '../../public/Ingles Easy.png';
 import UPEDestaca from '../../public/Certificado UPE Destaca 2025.png';
 import UFPENoMercado from '../../public/Certificado UFPE no mercado 2024.png';
+import HackatonBBTS from '../../public/Certificado Hackaton BBTS.png';
 
 const rawCertificatesData: Omit<Certificate, 'title' | 'description' | 'issuer'>[] = [
   {
@@ -101,6 +102,15 @@ const rawCertificatesData: Omit<Certificate, 'title' | 'description' | 'issuer'>
     pdfUrl: "https://drive.google.com/file/d/13T3TgKHDb6-ZEdt-bB_DJ5rmieLC1MKA/view?usp=sharing",
     issuerKey: "cert_upe_destaca_issuer", 
     issueDate: "2025-06-11", 
+  },
+  {
+    id: 10, 
+    titleKey: "cert_hackaton_bbts_title",
+    descriptionKey: "cert_hackaton_bbts_desc",
+    image: HackatonBBTS,
+    pdfUrl: "https://drive.google.com/file/d/1UFNVnYfqShO0RI3Zkf4-PkBka7FJH3oY/view?usp=sharing",
+    issuerKey: "cert_hackaton_bbts_issuer", 
+    issueDate: "2025-10-16", 
   },
 ];
 

@@ -11,11 +11,11 @@ export const hardSkillsData: HardSkillsCategories = {
     { nameKey: "skill_name_hibernate", icon: "devicon-hibernate-plain colored", levelKey: "skill_level_advanced" },
     { nameKey: "skill_name_maven", icon: "devicon-maven-plain colored", levelKey: "skill_level_advanced" },
     { nameKey: "skill_name_nodejs", icon: "devicon-nodejs-plain colored", levelKey: "skill_level_intermediate" },
+    { nameKey: "skill_name_nestjs", icon: "devicon-nestjs-original colored", levelKey: "skill_level_basic" },
     { nameKey: "skill_name_express", icon: "devicon-express-original colored", levelKey: "skill_level_intermediate" },
     { nameKey: "skill_name_sequelize", icon: "devicon-sequelize-plain colored", levelKey: "skill_level_intermediate" },
     { nameKey: "skill_name_python", icon: "devicon-python-plain colored", levelKey: "skill_level_basic" },
-    { nameKey: "skill_name_fastapi", icon: "devicon-fastapi-original colored", levelKey: "skill_level_basic" },
-    { nameKey: "skill_name_flask", icon: "devicon-flask-original colored", levelKey: "skill_level_basic" },
+    { nameKey: "skill_name_fastapi", icon: "devicon-fastapi-plain colored", levelKey: "skill_level_basic" },
   ], 
   frontend: [
     { nameKey: "skill_name_react", icon: "devicon-react-plain colored", levelKey: "skill_level_advanced" },
@@ -40,9 +40,11 @@ export const hardSkillsData: HardSkillsCategories = {
   ],
   devops: [
     { nameKey: "skill_name_docker", icon: "devicon-docker-plain colored", levelKey: "skill_level_basic" },
-    { nameKey: "skill_name_terraform", icon: "devicon-terraform-plain colored", levelKey: "skill_level_basic" },
+    { nameKey: "skill_name_kubernetes", icon: "devicon-kubernetes-plain colored", levelKey: "skill_level_basic" },
     { nameKey: "skill_name_jenkins", icon: "devicon-jenkins-plain colored", levelKey: "skill_level_basic" },
     { nameKey: "skill_name_githubactions", icon: "devicon-githubactions-plain colored", levelKey: "skill_level_basic" },
+    { nameKey: "skill_name_vercel", icon: "devicon-vercel-original colored", levelKey: "skill_level_advanced" },
+    { nameKey: "skill_name_railway", icon: "devicon-railway-original", levelKey: "skill_level_basic" },
   ],
   design: [
     { nameKey: "skill_name_figma", icon: "devicon-figma-plain colored", levelKey: "skill_level_advanced" },
