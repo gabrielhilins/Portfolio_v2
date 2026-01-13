@@ -332,11 +332,6 @@
       "id": 5,
       "title": "Site da minha agência de Tech & Design",
       "url": "https://www.ggabstechdesign.com.br/"
-    },
-    {
-      "id": 6,
-      "title": "Falar comigo",
-      "url": "/contact"
     }
   ],
   "links_footer": "© {{year}} Gabriel Henrique Lins. Todos os direitos reservados.",

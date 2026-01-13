@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FaPaperPlane, FaSpinner, FaWhatsapp } from "react-icons/fa";
+import { FaPaperPlane, FaWhatsapp } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -19,7 +19,6 @@ export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [isSending, setIsSending] = useState(false);
   const [, setErrors] = useState<{
     name?: string;
     email?: string;
@@ -46,7 +45,7 @@ export default function ContactPage() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!validateForm()) {
@@ -57,38 +56,21 @@ export default function ContactPage() {
       return;
     }
 
-    setIsSending(true);
+    const subject = encodeURIComponent(`Contato via Portfólio - ${name}`);
+    const body = encodeURIComponent(
+      `Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`
+    );
+    const mailtoLink = `mailto:gabrielhilins@gmail.com?subject=${subject}&body=${body}`;
 
-    try {
-      const response = await fetch("/api/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email, message }),
-      });
+    window.location.href = mailtoLink;
 
-      if (response.ok) {
-        toast.success(
-          t("contact_form_success") || "Mensagem enviada com sucesso!"
-        );
-        setName("");
-        setEmail("");
-        setMessage("");
-        setErrors({});
-      } else {
-        const errorData = await response.json();
-        throw new Error(errorData.error || "Erro ao enviar e-mail");
-      }
-    } catch (error) {
-      console.error("Erro ao enviar e-mail:", error);
-      toast.error(
-        t("contact_form_error") ||
-          "Ocorreu um erro ao enviar a mensagem. Tente novamente."
-      );
-    } finally {
-      setIsSending(false);
-    }
+    toast.success(
+      t("contact_form_success") || "Mensagem enviada com sucesso!"
+    );
+    setName("");
+    setEmail("");
+    setMessage("");
+    setErrors({});
   };
 
   return (
@@ -171,15 +153,10 @@ export default function ContactPage() {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
-                disabled={isSending}
+                className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
               >
-                {isSending ? (
-                  <FaSpinner className="h-5 w-5 mr-2 animate-spin" />
-                ) : (
-                  <FaPaperPlane className="h-5 w-5 mr-2" />
-                )}
-                {isSending ? t("contact_form_sending") : t("contact_form_send")}
+                <FaPaperPlane className="h-5 w-5 mr-2" />
+                {t("contact_form_send")}
               </Button>
             </form>
 

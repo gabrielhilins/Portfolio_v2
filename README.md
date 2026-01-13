@@ -8,10 +8,19 @@ Este repositório contém o código-fonte do meu site de portfólio pessoal. O s
 
 ## Tecnologias Utilizadas
 
-- Typescript
+- Next.js
 - Tailwind CSS
-- Next.Js
-- Resend
+- Lucide React
+- Framer Motion
+- i18next (Internationalization)
+- React Icons
+- React Toastify
+- React Tooltip
+- Sonner
+- Swiper
+- Shadcn/ui (Components)
+- EmailJS (opcional/configurado)
+- Vercel Analytics
 
 ## Como Executar o Projeto Localmente
 

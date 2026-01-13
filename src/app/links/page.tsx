@@ -15,9 +15,10 @@ import ThemeSwitcher from "@/components/common/ThemeSwitcher";
 import LanguageSwitcher from "@/components/common/LanguageSwitcher";
 import { useTheme } from "@/hooks/useTheme";
 import ResumeModal from "@/components/common/ResumeModal";
+import { DeveloperBadge } from "@/components/ui/developer-badge";
 
 const linkVariants = cva(
-  "flex items-center space-x-4 w-full p-4 rounded-md shadow-lg transition-all transform hover:translate-y-[-2px] hover:scale-[1.03] hover:shadow-xl",
+  "flex items-center space-x-4 w-full p-3 rounded-md shadow-lg transition-all transform hover:translate-y-[-2px] hover:scale-[1.03] hover:shadow-xl",
   {
     variants: {
       highlight: {
@@ -95,18 +96,21 @@ const LinksPage = () => {
 
   return (
     <div
-      className={`bg-background min-h-screen flex flex-col items-center justify-center p-4 animate-slide-up ${
+      className={`bg-background min-h-screen flex flex-col items-center justify-center py-8 px-4 animate-slide-up relative overflow-hidden ${
         darkMode ? "dark" : ""
       }`}
     >
+      {/* Background aura similar to Hero */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 animate-pulse"></div>
+
       <div
         className={twMerge(
-          "bg-card text-foreground w-full max-w-sm sm:max-w-md lg:max-w-lg p-6 sm:p-8 md:p-10 rounded-xl shadow-2xl flex flex-col items-center animate-floating"
+          "bg-card text-foreground w-full max-w-sm sm:max-w-lg lg:max-w-xl p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col items-center animate-floating relative z-10"
         )}
       >
         {/* Profile Section */}
-        <div className="flex flex-col items-center mb-8 mt-8">
-          <div className="w-24 h-24 relative mb-4">
+        <div className="flex flex-col items-center mb-6 mt-2">
+          <div className="w-20 h-20 relative mb-3">
             <Image
               src={GabrielPhoto}
               alt={t("links_title")}
@@ -114,24 +118,24 @@ const LinksPage = () => {
               className="rounded-full object-cover object-top"
             />
           </div>
-          <div className="flex flex-row items-center space-x-4 mt-2 mb-4">
+          <div className="flex flex-row items-center space-x-4 mb-3">
             <ThemeSwitcher
               darkMode={darkMode}
               toggleDarkMode={toggleDarkMode}
             />
             <LanguageSwitcher />
           </div>
-          <h1 className="text-2xl sm:text-3xl font-bold mt-4">
+          <h1 className="text-xl sm:text-2xl font-bold">
             {t("links_title")}
           </h1>
           <p
-            className="text-sm sm:text-base text-muted-foreground mt-1 text-center"
+            className="text-xs sm:text-sm text-muted-foreground mt-1 text-center"
             dangerouslySetInnerHTML={{ __html: t("links_description") }}
           />
         </div>
 
         {/* Links Section */}
-        <div className="flex flex-col space-y-4 w-full">
+        <div className="flex flex-col space-y-3 w-full">
           {agencyLinks.map((link) => {
             const IconComponent = link.icon;
             const LinkOrAnchor =
@@ -156,15 +160,15 @@ const LinksPage = () => {
               >
                 <div
                   className={twMerge(
-                    "flex items-center justify-center w-12 h-12 rounded-full transition-all",
+                    "flex items-center justify-center w-9 h-9 rounded-full transition-all",
                     hoveredId === link.id ? "scale-110" : "scale-100",
                     link.highlight ? "bg-white/20" : "bg-secondary"
                   )}
                 >
-                  <IconComponent size={30} className="text-white" />
+                  <IconComponent size={20} className="text-white" />
                 </div>
                 <span
-                  className={`text-base sm:text-lg ${
+                  className={`text-sm ${
                     link.highlight ? "text-white" : "text-foreground"
                   }`}
                 >
@@ -176,9 +180,13 @@ const LinksPage = () => {
         </div>
 
         {/* Footer */}
-        <div className="mt-8 text-center text-muted-foreground text-xs sm:text-sm">
+        <div className="mt-6 text-center text-muted-foreground text-[10px] sm:text-xs">
           {t("links_footer", { year: new Date().getFullYear() })}
         </div>
+      </div>
+
+      <div className="mt-6 relative z-10">
+        <DeveloperBadge />
       </div>
 
       <ResumeModal

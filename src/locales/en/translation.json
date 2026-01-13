@@ -332,11 +332,6 @@
       "id": 5,
       "title": "My Tech & Design Agency Website",
       "url": "https://www.ggabstechdesign.com.br/"
-    },
-    {
-      "id": 6,
-      "title": "Talk to me",
-      "url": "/contact"
     }
   ],
   "links_footer": "© {{year}} Gabriel Henrique Lins. All rights reserved.",
