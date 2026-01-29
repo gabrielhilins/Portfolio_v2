@@ -2,7 +2,6 @@
 
 import type React from "react";
 import { useTranslation } from 'react-i18next';
-import { FaExternalLinkAlt } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import GGABS from "../../public/GGABSLogo.png";
@@ -34,20 +33,18 @@ export default function GGABSSection() {
               {t('ggabs_services')}
             </p>
 
-            <a 
-              href="https://www.ggabstechdesign.com.br/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-[#111D3E] via-[#2E4377] to-[#A1C4FF] hover:from-[#111D3E]/90 hover:via-[#2E4377]/90 hover:to-[#A1C4FF]/90 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer"
-              >
-                <FaExternalLinkAlt className="h-5 w-5 mr-2" />
-                {t('ggabs_cta')}
-              </Button>
-            </a>
-          </div>
+                  <a
+                    href="https://ggabstechdesign.com.br"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button
+                      size="lg"
+                      className="bg-gradient-to-r from-[#111D3E] via-[#2E4377] to-[#A1C4FF] text-white px-8 py-3 rounded-full shadow-lg transition-all duration-300 cursor-pointer"
+                    >
+                      {t("ggabs_cta")}
+                    </Button>
+                  </a>          </div>
 
           <div className="relative animate-fade-in flex justify-center items-center">
             <div

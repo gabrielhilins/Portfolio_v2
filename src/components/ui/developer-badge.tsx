@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 interface DeveloperBadgeProps {
@@ -15,7 +16,7 @@ export const DeveloperBadge = ({ className = '' }: DeveloperBadgeProps) => {
           rel="noopener noreferrer"
           className="flex items-center gap-2 hover:text-iron-red transition-all duration-500 hover:-translate-y-1 group"
         >
-          <img 
+          <Image
             src="/Wordmark SVG.svg" 
             alt="GGABS" 
             className="h-5 w-auto grayscale brightness-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" 

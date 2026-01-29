@@ -16,6 +16,8 @@ interface HeroSectionProps {
   scrollToSection: (sectionId: string) => void;
 }
 
+import Image from "next/image";
+
 export default function HeroSection({ scrollToSection }: HeroSectionProps) {
   const { t, i18n } = useTranslation();
 
@@ -28,101 +30,107 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24 lg:pt-16 relative overflow-hidden"
     >
-      {/* Fundo animado para um efeito visual suave */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 animate-pulse"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 animate-pulse z-0"></div>
 
-      {/* Conteúdo principal da seção Hero */}
-      <div className="max-w-4xl mx-auto text-center animate-fade-in relative z-10">
-        <p className="text-lg text-muted-foreground mb-4 font-light animate-slide-up">
-          {t("hero_greeting")}
-        </p>
+      <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+        <div className="text-center lg:text-left animate-fade-in order-2 lg:order-1">
+          <p className="text-lg text-muted-foreground mb-2 font-light animate-slide-up delay-100">
+            {t("hero_greeting")}
+          </p>
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-slide-up bg-[length:200%_100%] animate-[gradient_3s_ease-in-out_infinite]">
-          {t("hero_name")}
-        </h1>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-slide-up delay-200 bg-[length:200%_100%] animate-[gradient_3s_ease-in-out_infinite]">
+            {t("hero_name")}
+          </h1>
 
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground mb-8 animate-slide-up">
-          {t("hero_title")}
-        </h2>
+          <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-6 animate-slide-up delay-300">
+            {t("hero_title")}
+          </h2>
 
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8 animate-slide-up">
-          {t("hero_subtitle")}
-        </p>
+          <p className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed mb-8 animate-slide-up delay-400">
+            {t("hero_subtitle")}
+          </p>
 
-        {/* Links para redes sociais e currículo */}
-        <div className="flex items-center justify-center gap-6 mb-12 animate-slide-up">
-          <a
-            href="https://github.com/gabrielhilins"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-accent hover:bg-gray-900 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer"
-            data-tooltip-id="github-tooltip"
-            data-tooltip-content={t("tooltip_github")}
-          >
-            <FaGithub className="h-5 w-5" />
-          </a>
-          <a
-            href="https://linkedin.com/in/gabriel-henrique-lins"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-accent hover:bg-blue-700 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer"
-            data-tooltip-id="linkedin-tooltip"
-            data-tooltip-content={t("tooltip_linkedin")}
-          >
-            <FaLinkedinIn className="h-5 w-5" />
-          </a>
-          {/* Botão para abrir o currículo */}
-          <a
-            href={getResumeURL()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-accent hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 cursor-pointer"
-            data-tooltip-id="resume-tooltip"
-            data-tooltip-content={t("tooltip_resume")}
-          >
-            <FaFileAlt className="h-5 w-5" />
-          </a>
+          <div className="flex items-center justify-center lg:justify-start gap-4 mb-8 animate-slide-up delay-500">
+            <a
+              href="https://github.com/gabrielhilins"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-accent text-foreground transition-all duration-300 hover:-translate-y-1"
+              data-tooltip-id="github-tooltip"
+              data-tooltip-content={t("tooltip_github")}
+            >
+              <FaGithub className="h-6 w-6" />
+            </a>
+            <a
+              href="https://linkedin.com/in/gabriel-henrique-lins"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-accent text-foreground transition-all duration-300 hover:-translate-y-1"
+              data-tooltip-id="linkedin-tooltip"
+              data-tooltip-content={t("tooltip_linkedin")}
+            >
+              <FaLinkedinIn className="h-6 w-6" />
+            </a>
+            <a
+              href={getResumeURL()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-accent text-foreground transition-all duration-300 hover:-translate-y-1"
+              data-tooltip-id="resume-tooltip"
+              data-tooltip-content={t("tooltip_resume")}
+            >
+              <FaFileAlt className="h-6 w-6" />
+            </a>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12 animate-slide-up delay-600">
+            <Button
+              size="lg"
+              onClick={() => scrollToSection("projects")}
+              className="w-full sm:w-auto bg-gradient-to-r from-primary to-primary/90 text-primary-foreground px-8 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2 hover:cursor-pointer"
+            >
+              <GrProjects className="h-5 w-5" />
+              {t("hero_cta1")}
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => scrollToSection("contact")}
+              className="w-full sm:w-auto px-8 py-3 rounded-full border-2 border-secondary text-secondary transition-all duration-300 flex items-center gap-2 hover:cursor-pointer"
+            >
+              <FaRegHandshake className="h-5 w-5" />
+              {t("hero_cta2")}
+            </Button>
+          </div>
         </div>
 
-        {/* Botões de CTA (Chamada para Ação) */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-slide-up">
-          <Button
-            size="lg"
-            onClick={() => scrollToSection("projects")}
-            className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-primary-foreground px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer flex items-center gap-2"
-            data-tooltip-id="view-projects-tooltip"
-            data-tooltip-content={t("tooltip_viewProjects")}
-          >
-            <GrProjects className="h-5 w-5" /> 
-            {t("hero_cta1")}
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={() => scrollToSection("contact")}
-            className="px-8 py-3 rounded-full border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground transition-all duration-300 hover:scale-105 cursor-pointer flex items-center gap-2"
-            data-tooltip-id="connect-tooltip"
-            data-tooltip-content={t("tooltip_connect")}
-          >
-            <FaRegHandshake className="h-5 w-5" /> 
-            {t("hero_cta2")}
-          </Button>
+        <div className="relative flex justify-center items-center animate-fade-in order-1 lg:order-2">
+          <div className="absolute w-72 h-72 md:w-96 md:h-96 bg-secondary rounded-full opacity-10 blur-3xl animate-blob -z-10"></div>
+          <div className="relative w-[280px] h-[280px] md:w-[350px] md:h-[350px] animate-slide-up">
+            <Image
+              src="/DSC_5650.png"
+              alt={t("hero_name")}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-full object-top border-4 border-secondary/80 shadow-2xl shadow-secondary/20"
+              priority
+            />
+          </div>
         </div>
+      </div>
 
-        {/* Botão para rolar para baixo, com animação de pulsação */}
-        <div className="flex justify-center animate-bounce">
-          <button
-            onClick={() => scrollToSection("about")}
-            className="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors duration-200 cursor-pointer"
-            data-tooltip-id="scroll-down-tooltip"
-            data-tooltip-content={t("tooltip_scrollDown")}
-          >
-            <span className="text-sm mb-2">{t("hero_scrollDown")}</span>
-            <FaChevronDown className="h-5 w-5" />
-          </button>
-        </div>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex justify-center animate-bounce z-10">
+        <button
+          onClick={() => scrollToSection("about")}
+          className="flex flex-col items-center text-muted-foreground transition-all duration-200 hover:-translate-y-1"
+          data-tooltip-id="scroll-down-tooltip"
+          data-tooltip-content={t("tooltip_scrollDown")}
+        >
+          <span className="text-sm mb-1">{t("hero_scrollDown")}</span>
+          <FaChevronDown className="h-5 w-5" />
+        </button>
       </div>
     </section>
   );

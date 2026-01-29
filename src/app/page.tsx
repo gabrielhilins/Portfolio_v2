@@ -11,7 +11,6 @@ import SkillsSection from "@/sections/SkillSection"
 import ProjectsSection from "@/sections/ProjectsSection"
 import ExperienceSection from "@/sections/ExperienceSection"
 import CertificatesSection from "@/sections/CertificatesSection"
-import GGABSSection from "@/sections/GGABSSection"
 import ContactSection from "@/sections/ContactSection"
 import { Tooltip } from "react-tooltip"
 import { projectsWithIds } from "@/lib/projects-data"
@@ -56,7 +55,6 @@ export default function Portfolio() {
       <ProjectsSection projects={projectsWithIds}/>
       <ExperienceSection />
       <CertificatesSection />
-      <GGABSSection />
       <ContactSection />
       <Footer scrollToSection={scrollToSection} />
 

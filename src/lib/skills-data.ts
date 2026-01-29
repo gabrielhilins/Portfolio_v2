@@ -40,8 +40,6 @@ export const hardSkillsData: HardSkillsCategories = {
   ],
   devops: [
     { nameKey: "skill_name_docker", icon: "devicon-docker-plain colored", levelKey: "skill_level_basic" },
-    { nameKey: "skill_name_kubernetes", icon: "devicon-kubernetes-plain colored", levelKey: "skill_level_basic" },
-    { nameKey: "skill_name_jenkins", icon: "devicon-jenkins-plain colored", levelKey: "skill_level_basic" },
     { nameKey: "skill_name_githubactions", icon: "devicon-githubactions-plain colored", levelKey: "skill_level_basic" },
     { nameKey: "skill_name_vercel", icon: "devicon-vercel-original colored", levelKey: "skill_level_advanced" },
     { nameKey: "skill_name_railway", icon: "devicon-railway-original", levelKey: "skill_level_basic" },

@@ -2,6 +2,7 @@ import { Experience } from './types';
 import GGABSLogo from '../../public/LogoTipo Fundo Azul e branco.png';
 import Tpf from '../../public/tpf_logo.jpg';
 import Unicap from '../../public/logo_unicap-universidade-catolica-de-pernambuco_WhD7Lu.png';
+import Descomplica from '../../public/Descomplica.png'
 import Cesar from '../../public/cesar_logo.jpg';
 import Aicury from '../../public/1701196833623.jpg';
 import Cmr from '../../public/Logo_CMR_Corel_x8_2018_Versão_2021.png';
@@ -56,6 +57,61 @@ export const experiencesData: Experience[] = [
     workModelKey: "work_model_remote"
   },
   {
+    id: 5,
+    type: 'academic',
+    logo: Descomplica,
+    link: "https://descomplica.com.br/pos-graduacao/a/",
+    companyKey: "exp_descomplica_company",
+    positionKey: "exp_descomplica_position",
+    locationKey: "exp_descomplica_location",
+    startDateKey: "exp_descomplica_startDate",
+    endDateKey: "exp_descomplica_endDate",
+    descriptionKey: "exp_descomplica_desc",
+    skills: [
+      "skill_name_java",
+      "skill_name_ui_ux",
+      "skill_name_scrum",
+      "skill_name_bootstrap",
+      "skill_name_javascript",
+      "skill_name_angular",
+      "skill_name_sql",
+      "skill_name_design_patterns",
+      "skill_name_clean_code",
+      "skill_name_code_review",
+      "skill_name_aws",
+      "skill_name_docker",
+      "skill_name_kubernetes",
+      "skill_name_aws_sqs",
+      "skill_name_aws_s3"
+    ],
+    workModelKey: "work_model_remote"
+  },
+  {
+    id: 7,
+    type: 'academic',
+    logo: Unicap,
+    link: "https://portal.unicap.br/",
+    companyKey: "exp_unicap_company",
+    positionKey: "exp_unicap_position",
+    locationKey: "exp_unicap_location",
+    startDateKey: "exp_unicap_startDate",
+    endDateKey: "exp_unicap_endDate",
+    descriptionKey: "exp_unicap_desc",
+    skills: [
+      "skill_name_object_oriented_programming",
+      "skill_name_design_thinking",
+      "skill_name_databases",
+      "skill_name_project_management",
+      "skill_name_statistics_probability",
+      "skill_name_programming_logic",
+      "skill_name_frontend_react",
+      "skill_name_mobile_flutter",
+      "skill_name_software_testing",
+      "skill_name_operating_systems"
+    ],
+    workModelKey: "work_model_presential"
+  },
+  {
     id: 3,
     type: 'professional',
     logo: Tpf,
@@ -99,31 +155,6 @@ export const experiencesData: Experience[] = [
     ],
     hiringModelKey: "hiring_model_temporary",
     workModelKey: "work_model_remote"
-  },
-  {
-    id: 5,
-    type: 'academic',
-    logo: Unicap,
-    link: "https://portal.unicap.br/",
-    companyKey: "exp_unicap_company",
-    positionKey: "exp_unicap_position",
-    locationKey: "exp_unicap_location",
-    startDateKey: "exp_unicap_startDate",
-    endDateKey: "exp_unicap_endDate",
-    descriptionKey: "exp_unicap_desc",
-    skills: [
-      "skill_name_object_oriented_programming",
-      "skill_name_design_thinking",
-      "skill_name_databases",
-      "skill_name_project_management",
-      "skill_name_statistics_probability",
-      "skill_name_programming_logic",
-      "skill_name_frontend_react",
-      "skill_name_mobile_flutter",
-      "skill_name_software_testing",
-      "skill_name_operating_systems"
-    ],
-    workModelKey: "work_model_presential"
   },
   {
     id: 6,

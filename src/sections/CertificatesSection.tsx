@@ -79,7 +79,7 @@ export default function CertificatesSection() {
                   <div className="flex justify-center mt-auto">
                     {certificate.pdfUrl && (
                       <a href={certificate.pdfUrl} target="_blank" rel="noopener noreferrer">
-                        <Button size="sm" className="bg-primary hover:bg-primary-600 text-white cursor-pointer">
+                        <Button size="sm" className="bg-primary text-white cursor-pointer">
                           <PiCertificateFill className="h-4 w-4 mr-2" />
                           {t('certificates_viewCertificate')}
                         </Button>
