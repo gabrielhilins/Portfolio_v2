@@ -9,8 +9,67 @@ import PORTFOLIOV1 from '../../public/PORTFOLIOV1.png';
 import PORTFOLIOV2 from '../../public/PORTFOLIOV2.png';
 import GGABSTECHDESIGN from '../../public/GGABSTECHDESIGN.png';
 import Caredmindedu from '../../public/CaremindEdu.png';
+import CLARAVILELA from '../../public/CLARAVILELA.png';
+import FERREIRAEDRUMOND from '../../public/FERREIRAEDRUMOND.png';
+import SMALLBUSINESSINVENTORY from '../../public/SMALLBUSINESSINVENTORY.png';
 
 export const projectsData: Omit<Project, 'id'>[] = [
+  {
+    titleKey: "project_ferreiraedrummond_title",
+    descriptionKey: "project_ferreiraedrummond_description",
+    image: FERREIRAEDRUMOND,
+    technologies: [
+      { nameKey: "skill_name_typescript", name: "TypeScript", icon: "devicon-typescript-plain colored" },
+      { nameKey: "skill_name_tailwind", name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
+      { nameKey: "skill_name_nextjs", name: "Next.js", icon: "devicon-nextjs-plain colored" },
+      { nameKey: "skill_name_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
+    ],
+    liveUrl: "https://advocacia-landing-page-delta.vercel.app/",
+    featured: true,
+    lastUpdated: "2026-01-10",
+    labelKey: "project_label_ggabs",
+    githubFrontendUrl: "https://github.com/gabrielhilins/Advocacia-landing-page",
+    githubBackendUrl: undefined,
+  },
+  {
+    titleKey: "project_smallbusinessinventory_title",
+    descriptionKey: "project_smallbusinessinventory_description",
+    image: SMALLBUSINESSINVENTORY,
+    technologies: [
+      { nameKey: "skill_name_typescript", name: "TypeScript", icon: "devicon-typescript-plain colored" },
+      { nameKey: "skill_name_tailwind", name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
+      { nameKey: "skill_name_nextjs", name: "Next.js", icon: "devicon-nextjs-plain colored" },
+      { nameKey: "skill_name_java", name: "Java", icon: "devicon-java-plain colored" },
+      { nameKey: "skill_name_springboot", name: "Spring Boot", icon: "devicon-spring-original-wordmark colored" },
+      { nameKey: "skill_name_hibernate", name: "Hibernate", icon: "devicon-hibernate-plain colored" },
+      { nameKey: "skill_name_swagger", name: "Swagger", icon: "devicon-swagger-plain colored" },
+      { nameKey: "skill_name_docker", name: "Docker", icon: "devicon-docker-plain colored" },
+    ],
+    liveUrl: undefined,
+    featured: true,
+    lastUpdated: "2026-01-30",
+    labelKey: "project_label_personal",
+    githubFrontendUrl: "https://github.com/gabrielhilins/inventory-manager-frontend",
+    githubBackendUrl: "https://github.com/gabrielhilins/inventory-manager-api",
+  },
+  {
+    titleKey: "project_claravilelaportfolio_title",
+    descriptionKey: "project_claravilela_description",
+    image: CLARAVILELA,
+    technologies: [
+      { nameKey: "skill_name_typescript", name: "TypeScript", icon: "devicon-typescript-plain colored" },
+      { nameKey: "skill_name_sass", name: "Sass", icon: "devicon-sass-original colored" },
+      { nameKey: "skill_name_nextjs", name: "Next.js", icon: "devicon-nextjs-plain colored" },
+      { nameKey: "skill_name_swiper", name: "Swiper js", icon: "devicon-swiper-original colored" },
+      { nameKey: "skill_name_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
+    ],
+    liveUrl: "https://clara-vilela-portfolio.vercel.app/",
+    featured: true,
+    lastUpdated: "2026-02-05",
+    labelKey: "project_label_ggabs",
+    githubFrontendUrl: "https://github.com/gabrielhilins/Clara-Vilela-Portfolio",
+    githubBackendUrl: undefined,
+  },
   {
     titleKey: "project_portfolio_v2_title",
     descriptionKey: "project_portfolio_v2_description",
@@ -62,7 +121,7 @@ export const projectsData: Omit<Project, 'id'>[] = [
     githubBackendUrl: undefined,
     featured: true,
     lastUpdated: "2025-07-03",
-    labelKey: "project_label_personal",
+    labelKey: "project_label_ggabs",
   },
   {
     titleKey: "project_semprenicea_title",

@@ -6,13 +6,11 @@ export function useTheme() {
   const [darkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
-    // Check local storage for user preference
+    // Check local storage for user preference, falling back to system preference
     const savedTheme = localStorage.getItem("theme")
-    const hour = new Date().getHours()
-    const isNight = hour >= 18 || hour < 6
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+    const initialDarkMode = savedTheme ? savedTheme === "dark" : prefersDark
 
-    // Set initial theme: use saved preference if available, otherwise use time-based
-    const initialDarkMode = savedTheme ? savedTheme === "dark" : isNight
     setDarkMode(initialDarkMode)
     if (initialDarkMode) {
       document.documentElement.classList.add("dark")

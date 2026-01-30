@@ -30,11 +30,11 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24 lg:pt-16 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center pt-24 lg:pt-16 relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 animate-pulse z-0"></div>
 
-      <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-4 justify-center items-center relative z-10">
         <div className="text-center lg:text-left animate-fade-in order-2 lg:order-1">
           <p className="text-lg text-muted-foreground mb-2 font-light animate-slide-up delay-100">
             {t("hero_greeting")}

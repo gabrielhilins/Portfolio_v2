@@ -153,7 +153,7 @@ export interface Project {
   descriptionKey: string;
   image: StaticImageImport;
   technologies: Technology[]; 
-  liveUrl: string;
+  liveUrl?: string;
   githubFrontendUrl?: string;
   githubBackendUrl?: string; 
   featured: boolean;

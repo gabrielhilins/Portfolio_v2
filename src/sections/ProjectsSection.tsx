@@ -78,7 +78,7 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
 
               <CardContent className="p-6 flex flex-col flex-grow">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-2xl font-bold text-foreground">
+                  <h3 className="text-2xl font-bold text-foreground max-w-[70%]">
                     {t(project.titleKey)}
                   </h3>
                   {project.labelKey && (
