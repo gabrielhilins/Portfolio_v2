@@ -28,8 +28,7 @@ export const hardSkillsData: HardSkillsCategories = {
   styling: [
     { nameKey: "skill_name_css", icon: "devicon-css3-plain colored", levelKey: "skill_level_advanced" },
     { nameKey: "skill_name_sass", icon: "devicon-sass-original colored", levelKey: "skill_level_advanced" },
-    { nameKey: "skill_name_tailwind", icon: "devicon-tailwindcss-plain colored", levelKey: "skill_level_basic" },
-    { nameKey: "skill_name_shadcn", icon: "https://ui.shadcn.com/apple-touch-icon.png", levelKey: "skill_level_basic" },
+    { nameKey: "skill_name_tailwind", icon: "devicon-tailwindcss-plain colored", levelKey: "skill_level_intermediate" },
     { nameKey: "skill_name_chakraui", icon: "devicon-chakraui-plain colored", levelKey: "skill_level_basic" },
   ],
   databases: [
@@ -41,6 +40,7 @@ export const hardSkillsData: HardSkillsCategories = {
   devops: [
     { nameKey: "skill_name_docker", icon: "devicon-docker-plain colored", levelKey: "skill_level_basic" },
     { nameKey: "skill_name_githubactions", icon: "devicon-githubactions-plain colored", levelKey: "skill_level_basic" },
+    { nameKey: "skill_name_sonarqube", icon: "devicon-sonarqube-plain colored", levelKey: "skill_level_basic" },
     { nameKey: "skill_name_vercel", icon: "devicon-vercel-original colored", levelKey: "skill_level_advanced" },
     { nameKey: "skill_name_railway", icon: "devicon-railway-original", levelKey: "skill_level_basic" },
   ],
@@ -63,7 +63,6 @@ export const hardSkillsData: HardSkillsCategories = {
     { nameKey: "skill_name_git", icon: "devicon-git-plain colored", levelKey: "skill_level_advanced" },
     { nameKey: "skill_name_github", icon: "devicon-github-plain colored", levelKey: "skill_level_advanced" },
     { nameKey: "skill_name_swagger", icon: "devicon-swagger-plain colored", levelKey: "skill_level_advanced" },
-    { nameKey: "skill_name_apidog", icon: "https://assets.apidog.com/static/logo/apidog-logo-256.png", levelKey: "skill_level_basic" },
   ]
 };
 

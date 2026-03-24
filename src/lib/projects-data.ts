@@ -12,8 +12,62 @@ import Caredmindedu from '../../public/CaremindEdu.png';
 import CLARAVILELA from '../../public/CLARAVILELA.png';
 import FERREIRAEDRUMOND from '../../public/FERREIRAEDRUMOND.png';
 import SMALLBUSINESSINVENTORY from '../../public/SMALLBUSINESSINVENTORY.png';
+import BRENUPREVIEW from '../../public/BRENUPREVIEW.png';
+import PODPAHRECORDSPREVIEW from '../../public/PODPAHRECORDSPREVIEW.png';
+import PEMUNPREVIEW from '../../public/PEMUNPREVIEW.png';
 
 export const projectsData: Omit<Project, 'id'>[] = [
+  {
+    titleKey: "project_podpah_records_title",
+    descriptionKey: "project_podpah_records_description",
+    image: PODPAHRECORDSPREVIEW,
+    technologies: [
+      { nameKey: "skill_name_typescript", name: "TypeScript", icon: "devicon-typescript-plain colored" },
+      { nameKey: "skill_name_tailwind", name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
+      { nameKey: "skill_name_nextjs", name: "Next.js", icon: "devicon-nextjs-plain colored" },
+      { nameKey: "skill_name_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
+    ],
+    liveUrl: "https://podpah-records.vercel.app/",
+    featured: true,
+    lastUpdated: "2026-03-16",
+    labelKey: "project_label_ggabs",
+    githubFrontendUrl: undefined,
+    githubBackendUrl: undefined,
+  },
+  {
+    titleKey: "project_brenu_title",
+    descriptionKey: "project_brenu_description",
+    image: BRENUPREVIEW,
+    technologies: [
+      { nameKey: "skill_name_typescript", name: "TypeScript", icon: "devicon-typescript-plain colored" },
+      { nameKey: "skill_name_tailwind", name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
+      { nameKey: "skill_name_nextjs", name: "Next.js", icon: "devicon-nextjs-plain colored" },
+      { nameKey: "skill_name_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
+    ],
+    liveUrl: "https://www.brenu081.com.br",
+    featured: true,
+    lastUpdated: "2026-03-08",
+    labelKey: "project_label_ggabs",
+    githubFrontendUrl: undefined,
+    githubBackendUrl: undefined,
+  },
+  {
+    titleKey: "project_pemun_title",
+    descriptionKey: "project_pemun_description",
+    image: PEMUNPREVIEW,
+    technologies: [
+      { nameKey: "skill_name_typescript", name: "TypeScript", icon: "devicon-typescript-plain colored" },
+      { nameKey: "skill_name_sass", name: "Sass", icon: "devicon-sass-original colored" },
+      { nameKey: "skill_name_nextjs", name: "Next.js", icon: "devicon-nextjs-plain colored" },
+      { nameKey: "skill_name_vercel", name: "Vercel", icon: "devicon-vercel-plain colored" },
+    ],
+    liveUrl: "https://www.pernambucomun.com.br",
+    featured: true,
+    lastUpdated: "2026-03-01",
+    labelKey: "project_label_ggabs",
+    githubFrontendUrl: undefined,
+    githubBackendUrl: undefined,
+  },
   {
     titleKey: "project_ferreiraedrummond_title",
     descriptionKey: "project_ferreiraedrummond_description",

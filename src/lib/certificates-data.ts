@@ -41,7 +41,7 @@ const rawCertificatesData: Omit<Certificate, 'title' | 'description' | 'issuer'>
     issueDate: "2024-09-20", 
   },
   {
-    id: 3, 
+    id: 9, 
     titleKey: "cert_java_title",
     descriptionKey: "cert_java_desc",
     image: JavaDIO,
@@ -50,7 +50,7 @@ const rawCertificatesData: Omit<Certificate, 'title' | 'description' | 'issuer'>
     issueDate: "2024-07-29", 
   },
   {
-    id: 4, 
+    id: 10, 
     titleKey: "cert_python_title",
     descriptionKey: "cert_python_desc",
     image: Python,
@@ -59,16 +59,16 @@ const rawCertificatesData: Omit<Certificate, 'title' | 'description' | 'issuer'>
     issueDate: "2024-03-06", 
   },
   {
-    id: 5, 
+    id: 11, 
     titleKey: "cert_git_title",
     descriptionKey: "cert_git_desc",
     image: Git,
-    pdfUrl: "https://cursos.alura.com.br/certificate/gabrielhilins/git-github-compartilhando-colaborando-projetos",
+    pdfUrl: "https://cursos.alura.com.br/certificate/gabrielhilins/git-github-compartilhando-colaborando-proje2tos",
     issuerKey: "cert_git_issuer", 
     issueDate: "2024-01-05", 
   },
   {
-    id: 6, 
+    id: 12, 
     titleKey: "cert_mongodb_title",
     descriptionKey: "cert_mongodb_desc",
     image: MongoDB,
@@ -77,7 +77,7 @@ const rawCertificatesData: Omit<Certificate, 'title' | 'description' | 'issuer'>
     issueDate: "2024-01-06", 
   },
   {
-    id: 7, 
+    id: 13, 
     titleKey: "cert_globo_title",
     descriptionKey: "cert_globo_desc",
     image: Globo,
@@ -86,7 +86,7 @@ const rawCertificatesData: Omit<Certificate, 'title' | 'description' | 'issuer'>
     issueDate: "2023-10-21", 
   },
   {
-    id: 8, 
+    id: 14, 
     titleKey: "cert_ufpe_no_mercado_2024_title",
     descriptionKey: "cert_ufpe_no_mercado_2024_desc",
     image: UFPENoMercado,
@@ -95,7 +95,7 @@ const rawCertificatesData: Omit<Certificate, 'title' | 'description' | 'issuer'>
     issueDate: "2024-11-13", 
   },
   {
-    id: 9, 
+    id: 15, 
     titleKey: "cert_upe_destaca_title",
     descriptionKey: "cert_upe_destaca_desc",
     image: UPEDestaca,
@@ -104,7 +104,7 @@ const rawCertificatesData: Omit<Certificate, 'title' | 'description' | 'issuer'>
     issueDate: "2025-06-11", 
   },
   {
-    id: 10, 
+    id: 16, 
     titleKey: "cert_hackaton_bbts_title",
     descriptionKey: "cert_hackaton_bbts_desc",
     image: HackatonBBTS,

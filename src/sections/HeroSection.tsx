@@ -23,8 +23,8 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
 
   const getResumeURL = () => {
     return i18n.language === "en"
-      ? "/Gabriel_Henrique_Lins_EN_CV.pdf"
-      : "/Gabriel_Henrique_Lins_CV.pdf";
+      ? t("hero_resume_en_url")
+      : t("hero_resume_pt_url");
   };
 
   return (
